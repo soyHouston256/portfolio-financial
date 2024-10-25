@@ -15,6 +15,9 @@
 
 \documentclass[9pt,a4paper,twoside]{rho-class/rho}
 \usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{algorithmic} % Añade esto en el preámbulo
+\usepackage{algorithm}
 
 %% Spanish babel recomendation
 % \usepackage[spanish,es-nodecimaldot,es-noindentfirst]{babel}
@@ -99,13 +102,168 @@
 
 %----------------------------------------------------------
 
-\section{Introduction}
+    \section{Problemas de optimización}
 
-    \rhostart{W}elcome to \textit{rho class} template for preparing your academic article or lab report. Throughout this guide, we will show you how to use this template and how to make modifications to this class. 
+        \rhostart{M}uchos problemas en campos cuantitativos como las finanzas y la ingeniería son problemas de optimización. Los problemas de optimización se encuentran en el centro de la compleja toma de decisiones y la definición de estrategias.
     
-    This class includes the following files placed in the ‘rho-class’ folder: rho.cls, rhoenvs.sty, rhobabel.sty and README.md.
+        \subsection{Max-Cut y Problema del Vendedor Viajero}
+            La computación cuántica aborda problemas de optimización, específicamente los problemas de Max-Cut y el Problema del Vendedor Viajero (TSP). Ambos son problemas NP-completos, lo que significa que son difíciles de resolver clásicamente para un conjunto $N$ grande de nodos.
+            El problema Max-Cut busca dividir los nodos de un grafo $G = (V,E)$ en dos subconjuntos $S$ y $\bar{S}$, maximizando la función objetivo:
+            \begin{equation}
+                \text{Max-Cut}(S) = \sum_{(i,j) \in E} w_{ij}x_i(1-x_j)
+            \end{equation}
 
-\section{Casos reales}
+            donde:
+            \begin{itemize}
+                \item $w_{ij}$ representa el peso de la arista entre los nodos $i$ y $j$
+                \item $x_i \in \{0,1\}$ indica la asignación del nodo $i$ al subconjunto
+            \end{itemize}
+            El TSP se puede formular matemáticamente como:
+
+            \begin{equation}
+                \min \sum_{i=1}^{n} \sum_{j=1}^{n} c_{ij}x_{ij}
+            \end{equation}
+            sujeto a:
+            \begin{align} \sum_{j=1}^{n} x_{ij} = 1, \quad \forall i \quad \sum_{i=1}^{n} x_{ij} = 1, \quad \forall j \quad x_{ij} \in {0,1}, \quad \forall i,j \end{align}
+
+            Para un grafo con $n=4$ nodos, el espacio de soluciones es:
+
+            \begin{equation}
+                \text{Total de combinaciones} = 2^n = 2^4 = 16
+            \end{equation}
+
+            La complejidad computacional crece exponencialmente con el número de nodos: \begin{equation}O(2^n)\end{equation}
+
+            Para cada combinación $c \in \{0,1\}^n$, se evalúa la función de costo:
+
+            \begin{equation}
+                f(c) = \sum_{(i,j) \in E} w_{ij}c_i(1-c_j)
+            \end{equation}
+
+            La solución óptima $c^*$ es aquella que maximiza esta función:
+
+            \begin{equation}
+                c^* = \max_{c \in \{0,1\}^n} f(c)
+            \end{equation}
+
+            En este ejemplo particular, la solución óptima alcanza un costo de 4.0 unidades.
+
+            Figure \ref{fig:figure} Grafo con 4 vertices.
+                
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.71\columnwidth]{grafo.pdf}
+                \caption{Grafo con 4 vertices \cite{PFGPlots}.}
+                \label{fig:figure}
+            \end{figure}
+
+            Si bien este enfoque funciona para grafos pequeños, su escalabilidad es muy limitada. El número de combinaciones posibles crece exponencialmente con el número de nodos, siguiendo la función:
+
+            \begin{equation}
+                f(n) = 2^n
+            \end{equation}
+
+            Para ilustrar esta explosión combinatoria, consideremos un grafo con $n = 1000$ nodos:
+
+            \begin{equation}
+                f(1000) = 2^{1000} \approx 1.071 \times 10^{301}
+            \end{equation}
+
+            Este número es astronómicamente grande, haciendo que el enfoque de fuerza bruta sea computacionalmente inviable. Para contextualizar:
+
+            \begin{itemize}
+                \item El número de átomos en el universo observable es aproximadamente $10^{80}$
+                \item El número de operaciones por segundo de la supercomputadora más rápida es del orden de $10^{18}$
+            \end{itemize}
+
+            Por lo tanto, incluso si pudiéramos evaluar un millón de combinaciones por segundo:
+
+            \begin{equation}
+                \text{Tiempo de cómputo} \approx \frac{2^{1000}}{10^6} \text{ segundos}
+            \end{equation}
+
+            Este tiempo excede por mucho la edad actual del universo, demostrando la inviabilidad práctica del enfoque de fuerza bruta para problemas de gran escala.
+                
+        \subsection{A Power Allocation Management System Using an Algorithm for the Knapsack Problem}
+            Este método explora un sistema de gestión de asignación de energía que utiliza el problema de la mochila para optimizar el consumo energético en hogares. Los autores proponen una solución que consiste en enchufes inteligentes y un controlador centralizado que se comunican a través de Wi-Fi. El controlador utiliza un algoritmo de programación dinámica para resolver el problema de la mochila, decidiendo qué electrodomésticos encender o apagar para maximizar la calidad de vida del usuario sin superar un límite de consumo total. Se presentan resultados experimentales que demuestran que el sistema puede funcionar de manera eficiente y práctica estas desiciones se hacen siguiendo las siguientes formulas.
+            \begin{align}
+                &\max \sum_{i=1}^{n} p_ix_i \\
+                &\text{s.t.} \sum_{i=1}^{n} w_ix_i \leq c, x_i \in \{0,1\}
+            \end{align}
+            Entonces para poder llevarlo a un lenguaje computacional tendriamos el siguiente pseudocodigo.
+            \begin{algorithm}
+            \caption{Algoritmo de Programación Dinámica para Knapsack}
+            \begin{algorithmic}[1]
+            \REQUIRE $n$ items con pesos $w_i$ y valores $p_i$, capacidad $c$
+            \ENSURE Tabla $P$ con valores óptimos.
+            \FOR{$j = 0$ to $c$}
+                \STATE $P(0,j) \gets 0$
+            \ENDFOR
+            \FOR{$i = 1$ to $n$}
+                \FOR{$j = 0$ to $c$}
+                    \IF{$j \geq w_i$}
+                        \STATE $P(i,j) \gets \max\{P(i-1,j-w_i) + p_i, P(i-1,j)\}$
+                    \ELSE
+                        \STATE $P(i,j) \gets P(i-1,j)$
+                    \ENDIF
+                \ENDFOR
+            \ENDFOR
+            \end{algorithmic}
+            \end{algorithm}
+
+        \subsection{Optimización de Portafolio Financiero}
+            La optimización de un portafolio financiero es un problema fundamental en la gestión de inversiones, cuyo objetivo es construir un conjunto de activos que equilibre el rendimiento y el riesgo. Desde la propuesta de la Teoría Moderna de Portafolio (MPT, por sus siglas en inglés) por Harry Markowitz en 1952, se han desarrollado diversas metodologías para la selección de activos y la asignación óptima de capital. El principal desafío radica en considerar la incertidumbre inherente de los mercados financieros y los riesgos asociados a cada inversión.
+            \\
+            Este informe explora el problema de optimización de portafolios, revisando la metodología de Markowitz y sus extensiones modernas. Se abordan también técnicas heurísticas y metaheurísticas que buscan mejorar la eficiencia computacional y la robustez de las soluciones en escenarios de alta complejidad.
+            \\
+            La MPT se basa en dos principios fundamentales: maximizar el rendimiento esperado y minimizar el riesgo, generalmente representado por la varianza del rendimiento. Para formalizar estos conceptos, sea un portafolio compuesto por n activos, donde el peso de cada activo i en el portafolio está dado por ${w}_{i}$. El rendimiento esperado $E\left({R}_{P}\right)$ del portafolio es:
+        
+            \begin{equation}
+                \label{ec:ecuacion1}
+            E\left({R}_{P}\right)=\sum _{i=1}^{n}{w}_{i}E\left({R}_{i}\right)
+            \end{equation}
+        
+            donde $E\left({R}_{i}\right)$ es el rendimiento esperado del activo $i$
+            \\
+            
+            El riesgo asociado, representado por la varianza del portafolio ${\sigma }^{2}_{p}$, está dado por:
+        
+            \begin{equation}
+            {\sigma }^{2}_{p}=\sum _{i=1}^{n}\sum _{j=1}^{n}{w}_{i}{w}_{j}Cov\left({R}_{i},{R}_{j}\right)
+            \end{equation}
+        
+            donde $Cov\left({R}_{i},{R}_{j}\right)$ es la covarianza entre los rendimientos de los activos {i}, {j}
+        
+            \vspace{2mm}El objetivo de la optimización del portafolio es resolver el siguiente problema de programación cuadrática:
+        
+            \begin{center}
+                $\underset{w}{\mathrm{min}}\frac{1}{2}{w}^{t}\Sigma w$ sujeto a ${w}^{t}1=1$, ${w}_{i}\ge 0$     
+            \end{center}
+        
+            \vspace{2mm}donde $\Sigma $ es la matriz de covarianzas y ${w}$ representa el vector de pesos.
+        
+            \vspace{2mm}La optimización de portafolios según Markowitz se enfrenta a varios desafíos prácticos, entre ellos:
+        
+            \begin{itemize}
+                \item \textbf{Dimensionalidad alta:} A medida que crece el número de  activos en el portafolio, la complejidad computacional de la optimización crece exponencialmente debido a la necesidad de calcular las covarianzas entre los activos.
+                \item \textbf{Inestabilidad de los parámetros:} Las estimaciones de rendimientos y covarianzas pueden ser volátiles, lo que afecta la robustez de las soluciones.
+                \item \textbf{Costos de transacción y restricciones prácticas:} Los modelos clásicos no consideran costos de transacción ni restricciones de mercado, lo que limita su aplicabilidad.
+            \end{itemize}
+        
+            \noindent Para abordar estas limitaciones, se han propuesto enfoques avanzados que incluyen algoritmos heurísticos y metaheurísticos, así como modelos robustos que tienen en cuenta la incertidumbre de los parámetros.\\
+            Los algoritmos metaheurísticos, como los \textbf{algoritmos genéticos (GA)}, el \textbf{recocido simulado (simulated annealing)} y el \textbf{algoritmo de colonia de hormigas}, han demostrado ser eficaces para abordar la optimización de portafolios en escenarios complejos y no lineales. Estos enfoques no garantizan una solución óptima global, pero tienen la ventaja de explorar de manera eficiente grandes espacios de búsqueda.
+        
+            \begin{itemize}
+                \item \textbf{Algoritmos Genéticos:} Utilizan principios de evolución biológica para generar y seleccionar soluciones candidatas. Han sido aplicados con éxito en la optimización de portafolios bajo restricciones no lineales y considerando múltiples objetivos .
+                \item \textbf{Recocido Simulado:} Inspirado en el proceso de enfriamiento de los metales, este algoritmo permite escapar de óptimos locales, ofreciendo una mejor exploración del espacio de soluciones.
+                \item \textbf{Algoritmo de Colonia de Hormigas:} Este enfoque, basado en el comportamiento colectivo de las hormigas, ha sido aplicado para encontrar soluciones óptimas en portafolios sujetos a restricciones de cardinalidad y costos de transacción .
+            \end{itemize}
+        
+            \noindent Estas técnicas permiten abordar de manera eficiente problemas que involucran múltiples restricciones y objetivos, proporcionando una mejora en la robustez de las soluciones en comparación con los enfoques tradicionales.
+        
+            \vspace{2mm}\noindent Además de los enfoques metaheurísticos, los modelos robustos han ganado popularidad en los últimos años. Estos modelos abordan la incertidumbre en las estimaciones de los parámetros, utilizando técnicas como el enfoque de conjuntos robustos para considerar una gama de escenarios adversos en la optimización del portafolio .
+            El enfoque robusto busca soluciones que sean menos sensibles a las variaciones de los datos de entrada, lo que es especialmente útil en mercados financieros volátiles.
+    \section{Casos reales}
 
     \subsection{Detección de abuso y fraude en servicios de streaming mediante Machine Learning con reconocimiento heurístico}
     La Plataforma de streaming Netflix desarrollo un framework para la detección de fraudes en su aplicación empleando algoritmos heurísticos desarrollados en la compañía y Machine Learning (ML), usando diferentes fuentes de datos como la trazabilidad de los usuarios, conexiones, contenido visualizado, ubicaciones, entre otros. Los autores Esmaeilzadeh et al. (2022), expresan en su artículo que desarrollar un modelo ML para la detección de anomalías en el contexto de su aplicación implica muchos retos, entre ellos están, el análisis en tiempo real que puede llegar a ser costoso en términos de infraestructura y poca escalable, la definición de anomalía depende del contexto de negocio y aplicación y la cantidad de datos para alimentar al modelo, ya que al tratarse de casos no recurrentes se presenta una disparidad en la cantidad de datos. Debido a estas razones los autores plantean las siguientes soluciones. Primero, una solución basada en reglas que permita identificar irregularidades tomando como base el conocimiento y experiencia de los expertos de negocio, brindando características esenciales y contexto sobre los incidentes que permitan elaborar algoritmos heurísticos. Segundo, aplicar otra solución basada en modelo que permita identificar los casos anormales en la plataforma de forma automática. Para ejecutar este marco de trabajo primero se separaron en tres tipos de fraude, de cuentas, servicios y contenido, entonces la primera solución planteada complementa a la segunda, ya que ayuda a etiquetar y limpiar los datos que ingesta a la segunda solución, con la finalidad de identificar cual es el fraude que más se comete en la aplicación y poder identificar la cuenta asociada al cliente que infringen las políticas de la aplicación. Por último, con algoritmos heurísticos desarrollados con base a la experiencia y conocimiento de los expertos, complementa un modelo ML incrementando su precisión hasta en un 86\% en el análisis de fraude en tiempo real.
