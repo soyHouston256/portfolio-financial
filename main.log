@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.24)  25 OCT 2024 11:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.24)  25 OCT 2024 13:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1709,22 +1709,22 @@ Package pdftex.def Info: figures/grafo.pdf  used on input line 156.
 
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-ts1.enc} <./figures/grafo.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 227--229
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 250--251
+Underfull \hbox (badness 2134) in paragraph at lines 251--252
 []\T1/stix2/b/n/9 (+20) Inestabilidad de los parámet-ros: \T1/stix2/m/n/9 (+20) Las es-ti-ma-ciones de
  []
 
 
-Underfull \hbox (badness 3439) in paragraph at lines 250--251
+Underfull \hbox (badness 3439) in paragraph at lines 251--252
 \T1/stix2/m/n/9 (+20) rendimien-tos y co-var-i-an-zas son fre-cuente-mente volátiles,
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 264.
+(Font)              scaled to size 6.64998pt on input line 265.
 [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathcal.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathsf.enc}] [3] (./main.toc
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.59998pt on input line 3.
@@ -1733,7 +1733,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 \openout5 = `main.toc'.
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 4.74998pt on input line 314.
+(Font)              scaled to size 4.74998pt on input line 315.
  [4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc}
 
 ] 
@@ -1748,18 +1748,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68554 strings out of 474116
- 1493504 string characters out of 5743681
+ 68551 strings out of 474116
+ 1493477 string characters out of 5743681
  2629462 words of memory out of 5000000
  89688 multiletter control sequences out of 15000+600000
- 798222 words of font info for 327 fonts, out of 8000000 for 9000
+ 798097 words of font info for 325 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  137i,12n,143p,2105b,1876s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix2-type1/STIX2Math.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/ccicons/ccicons.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (4 pages, 741165 bytes).
+Output written on main.pdf (4 pages, 741006 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
+ 233 PDF objects out of 1000 (max. 8388607)
+ 188 compressed objects within 2 object streams
  49 named destinations out of 1000 (max. 500000)
  96370 words of extra memory for PDF output out of 106986 (max. 10000000)
 
