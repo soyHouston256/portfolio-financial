@@ -19,16 +19,143 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global}
-    \entry{PFGPlots}{misc}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+    \entry{Morimoto2014}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=3feddb92ac574742ba8dac0f6760f98a}{%
+           family={Morimoto},
+           familyi={M\bibinitperiod},
+           given={Naoyuki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a6daa7b33d3026785dac5fab65f8fbd8}{%
+           family={Fujita},
+           familyi={F\bibinitperiod},
+           given={Yuu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=63ef8adddbd27afdb93f42ecb3aee3e2}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={Masaaki},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e49bff045e54038e4c826f826e6d68f8}{%
+           family={Yoshimizu},
+           familyi={Y\bibinitperiod},
+           given={Hiroyuki},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c7ddd0663c94cfb94eb371ec1e946724}{%
+           family={Takiyamada},
+           familyi={T\bibinitperiod},
+           given={Masafumi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6e9b94d658f37c614395982cd21de3d4}{%
+           family={Akehi},
+           familyi={A\bibinitperiod},
+           given={Terukazu},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8461fe033907a04e347cccc69790065f}{%
+           family={Tanaka},
+           familyi={T\bibinitperiod},
+           given={Masami},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a5186a81dd65014b43e3247861581e39}
+      \strng{fullhash}{0e06014c21c788bf0504ed26146e70f9}
+      \strng{bibnamehash}{a5186a81dd65014b43e3247861581e39}
+      \strng{authorbibnamehash}{a5186a81dd65014b43e3247861581e39}
+      \strng{authornamehash}{a5186a81dd65014b43e3247861581e39}
+      \strng{authorfullhash}{0e06014c21c788bf0504ed26146e70f9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{PGFPlots - A LaTeX package to create plots.}}
+      \field{booktitle}{2014 IEEE 38th Annual International Computers, Software and Applications Conference Workshops}
+      \field{isbn}{978-1-4799-3578-9}
+      \field{title}{A Power Allocation Management System Using an Algorithm for the Knapsack Problem}
+      \field{year}{2014}
+      \field{pages}{590\bibrangedash 595}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/COMPSACW.2014.99
+      \endverb
+    \endentry
+    \entry{Mari2020}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d710c8db1cd4f6387ac3e9ea5766ea95}{%
+           family={Mari},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d710c8db1cd4f6387ac3e9ea5766ea95}
+      \strng{fullhash}{d710c8db1cd4f6387ac3e9ea5766ea95}
+      \strng{bibnamehash}{d710c8db1cd4f6387ac3e9ea5766ea95}
+      \strng{authorbibnamehash}{d710c8db1cd4f6387ac3e9ea5766ea95}
+      \strng{authornamehash}{d710c8db1cd4f6387ac3e9ea5766ea95}
+      \strng{authorfullhash}{d710c8db1cd4f6387ac3e9ea5766ea95}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Optimization}
+      \field{title}{Aplicación de métodos Greedy en problemas NP-hard}
+      \field{year}{2020}
+    \endentry
+    \entry{Breda2023}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5fca4e0ceb52ac9377302205b642f432}{%
+           family={Breda},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cd580bd53f2d95eb3165672936857f83}{%
+           family={Mestria},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{54f48cf9c76896107daec3d4ed310b50}
+      \strng{fullhash}{54f48cf9c76896107daec3d4ed310b50}
+      \strng{bibnamehash}{54f48cf9c76896107daec3d4ed310b50}
+      \strng{authorbibnamehash}{54f48cf9c76896107daec3d4ed310b50}
+      \strng{authornamehash}{54f48cf9c76896107daec3d4ed310b50}
+      \strng{authorfullhash}{54f48cf9c76896107daec3d4ed310b50}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nombre de la Revista}
+      \field{title}{Optimización de redes eléctricas usando el método Johnson}
+      \field{year}{2023}
+    \endentry
+    \entry{qiskit2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0e74cf12ad2a330f96dc3d007819697d}{%
+           family={{Qiskit Community}},
+           familyi={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e74cf12ad2a330f96dc3d007819697d}
+      \strng{fullhash}{0e74cf12ad2a330f96dc3d007819697d}
+      \strng{bibnamehash}{0e74cf12ad2a330f96dc3d007819697d}
+      \strng{authorbibnamehash}{0e74cf12ad2a330f96dc3d007819697d}
+      \strng{authornamehash}{0e74cf12ad2a330f96dc3d007819697d}
+      \strng{authorfullhash}{0e74cf12ad2a330f96dc3d007819697d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Maximum Cut and Traveling Salesman Problems using Qiskit}
+      \field{urlday}{25}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://pgfplots.sourceforge.net/
+      \verb https://qiskit-community.github.io/qiskit-optimization/locale/es_UN/tutorials/06_examples_max_cut_and_tsp.html
       \endverb
       \verb{url}
-      \verb https://pgfplots.sourceforge.net/
+      \verb https://qiskit-community.github.io/qiskit-optimization/locale/es_UN/tutorials/06_examples_max_cut_and_tsp.html
       \endverb
     \endentry
   \enddatalist

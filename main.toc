@@ -1,0 +1,14 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Problemas de optimización}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Max-Cut y Problema del Vendedor Viajero}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Gestión de asignación de potencia utilizando el algoritmo del problema de la mochila(Knapsack)}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Optimización de Portafolio Financiero}{2}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Heurística}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Método Johnson}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Algoritmos Genéticos}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Algoritmos Greedy}{3}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Casos reales}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Detección de abuso y fraude en servicios de streaming mediante Machine Learning con reconocimiento heurístico}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Uso de Machine Learning para predecir el proximo archivo}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Conclusiones}{3}{section.4}%
+\contentsfinish 
