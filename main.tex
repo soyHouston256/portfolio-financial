@@ -16,8 +16,9 @@
 \documentclass[9pt,a4paper,twoside]{rho-class/rho}
 \usepackage[english]{babel}
 \usepackage{amsmath}
-\usepackage{algorithmic} % Añade esto en el preámbulo
+% \usepackage{algorithmic} % Añade esto en el preámbulo
 \usepackage{algorithm}
+\usepackage{algpseudocode}
 \usepackage{hyperref} % Para manejar URLs
 \usepackage{biblatex} % Para el manejo de bibliografía
 \addbibresource{rho.bib} 
@@ -91,7 +92,7 @@
 
 %----------------------------------------------------------
 
-\keywords{optimización, heurísticas, gredy, knapsack, Machine Learning, reconocimiento heurístico, np-hard}
+\keywords{optimización, heurísticas, greedy, knapsack, Machine Learning, reconocimiento heurístico, np-hard}
 
 %----------------------------------------------------------
 
@@ -191,70 +192,84 @@
                 &\text{s.t.} \sum_{i=1}^{n} w_ix_i \leq c, x_i \in \{0,1\}
             \end{align}
             Entonces para poder llevarlo a un lenguaje computacional tendriamos el siguiente pseudocodigo.
+            
             \begin{algorithm}
-            \caption{Algoritmo de Programación Dinámica para Knapsack}
-            \begin{algorithmic}[1]
-            \REQUIRE $n$ items con pesos $w_i$ y valores $p_i$, capacidad $c$
-            \ENSURE Tabla $P$ con valores óptimos.
-            \FOR{$j = 0$ to $c$}
-                \STATE $P(0,j) \gets 0$
-            \ENDFOR
-            \FOR{$i = 1$ to $n$}
-                \FOR{$j = 0$ to $c$}
-                    \IF{$j \geq w_i$}
-                        \STATE $P(i,j) \gets \max\{P(i-1,j-w_i) + p_i, P(i-1,j)\}$
-                    \ELSE
-                        \STATE $P(i,j) \gets P(i-1,j)$
-                    \ENDIF
-                \ENDFOR
-            \ENDFOR
-            \end{algorithmic}
+                \caption{Algoritmo de Programación Dinámica para Knapsack}
+                \begin{algorithmic}[1]
+                \Require $n$ items con pesos $w_i$ y valores $p_i$, capacidad $c$
+                \Ensure Tabla $P$ con valores óptimos
+                \For{$j = 0$ \textbf{to} $c$}
+                    \State $P(0,j) \gets 0$
+                \EndFor
+                \For{$i = 1$ \textbf{to} $n$}
+                    \For{$j = 0$ \textbf{to} $c$}
+                        \If{$j \geq w_i$}
+                            \State $P(i,j) \gets \max\{P(i-1,j-w_i) + p_i, P(i-1,j)\}$
+                        \Else
+                            \State $P(i,j) \gets P(i-1,j)$
+                        \EndIf
+                    \EndFor
+                \EndFor
+                \end{algorithmic}
             \end{algorithm}
 
-        \subsection{Optimización de Portafolio Financiero}
-            La optimización de un portafolio financiero es un problema fundamental en la gestión de inversiones, cuyo objetivo es construir un conjunto de activos que equilibre el rendimiento y el riesgo. Desde la propuesta de la Teoría Moderna de Portafolio (MPT, por sus siglas en inglés) por Harry Markowitz en 1952, se han desarrollado diversas metodologías para la selección de activos y la asignación óptima de capital. El principal desafío radica en considerar la incertidumbre inherente de los mercados financieros y los riesgos asociados a cada inversión.
-            \\
-            Este informe explora el problema de optimización de portafolios, revisando la metodología de Markowitz y sus extensiones modernas. Se abordan también técnicas heurísticas y metaheurísticas que buscan mejorar la eficiencia computacional y la robustez de las soluciones en escenarios de alta complejidad.
-            \\
-            La MPT se basa en dos principios fundamentales: maximizar el rendimiento esperado y minimizar el riesgo, generalmente representado por la varianza del rendimiento. Para formalizar estos conceptos, sea un portafolio compuesto por n activos, donde el peso de cada activo i en el portafolio está dado por ${w}_{i}$. El rendimiento esperado $E\left({R}_{P}\right)$ del portafolio es:
-        
-            \begin{equation}
-                \label{ec:ecuacion1}
-            E\left({R}_{P}\right)=\sum _{i=1}^{n}{w}_{i}E\left({R}_{i}\right)
-            \end{equation}
-        
-            donde $E\left({R}_{i}\right)$ es el rendimiento esperado del activo $i$
-            \\
-            
-            El riesgo asociado, representado por la varianza del portafolio ${\sigma }^{2}_{p}$, está dado por:
-        
-            \begin{equation}
-            {\sigma }^{2}_{p}=\sum _{i=1}^{n}\sum _{j=1}^{n}{w}_{i}{w}_{j}Cov\left({R}_{i},{R}_{j}\right)
-            \end{equation}
-        
-            donde $Cov\left({R}_{i},{R}_{j}\right)$ es la covarianza entre los rendimientos de los activos {i}, {j}
-        
-            \vspace{2mm}El objetivo de la optimización del portafolio es resolver el siguiente problema de programación cuadrática:
-        
-            \begin{center}
-                $\underset{w}{\mathrm{min}}\frac{1}{2}{w}^{t}\Sigma w$ sujeto a ${w}^{t}1=1$, ${w}_{i}\ge 0$     
-            \end{center}
-        
-            \vspace{2mm}donde $\Sigma $ es la matriz de covarianzas y ${w}$ representa el vector de pesos.
-        
-            \vspace{2mm}La optimización de portafolios según Markowitz se enfrenta a varios desafíos prácticos, entre ellos:
-        
-            \begin{itemize}
-                \item \textbf{Dimensionalidad alta:} A medida que crece el número de  activos en el portafolio, la complejidad computacional de la optimización crece exponencialmente debido a la necesidad de calcular las covarianzas entre los activos.
-                \item \textbf{Inestabilidad de los parámetros:} Las estimaciones de rendimientos y covarianzas son frecuentemente volátiles, afectando la robustez de las soluciones.
-                \item \textbf{Costos de transacción y restricciones prácticas:} Los modelos clásicos no consideran costos de transacción ni restricciones de mercado, lo que limita su aplicabilidad.
-            \end{itemize}
-        
-            \noindent Para abordar estas limitaciones, se han propuesto enfoques avanzados que incluyen algoritmos heurísticos y metaheurísticos, así como modelos robustos que tienen en cuenta la incertidumbre de los parámetros.
+
 %----------------------------------------------------------
 %----------------------------------------------------------
 % REAL HEURISTIC
 %----------------------------------------------------------    
+        
+        \subsection{Optimización de Portafolio Financiero}
+            La optimización de portafolios financieros es fundamental en la gestión de inversiones, y su objetivo es lograr un equilibrio adecuado entre el rendimiento y el riesgo en la selección de activos. La Teoría Moderna de Portafolio (MPT), propuesta por Markowitz en 1952, establece un marco para maximizar el rendimiento esperado y minimizar el riesgo a través de una diversificación eficiente \cite{Deb2001}. El principal desafío radica en considerar la incertidumbre inherente de los mercados financieros y los riesgos asociados a cada inversión.
+            \\
+            La MPT se basa en dos principios fundamentales: maximizar el rendimiento esperado y minimizar el riesgo, generalmente representado por la varianza del rendimiento. Para formalizar estos conceptos, sea un portafolio compuesto por n activos, donde el peso de cada activo i en el portafolio está dado por ${w}_{i}$. El rendimiento esperado $E\left({R}_{P}\right)$ del portafolio es:
+
+            \begin{equation}
+                \label{ec:ecuacion1}
+            E\left({R}_{P}\right)=\sum _{i=1}^{n}{w}_{i}E\left({R}_{i}\right)
+            \end{equation}
+
+            donde $E\left({R}_{i}\right)$ es el rendimiento esperado del activo $i$
+            \\
+
+            El riesgo asociado, representado por la varianza del portafolio ${\sigma }^{2}_{p}$, está dado por:
+
+            \begin{equation}
+            {\sigma }^{2}_{p}=\sum _{i=1}^{n}\sum _{j=1}^{n}{w}_{i}{w}_{j}Cov\left({R}_{i},{R}_{j}\right)
+            \end{equation}
+
+            donde $Cov\left({R}_{i},{R}_{j}\right)$ es la covarianza entre los rendimientos de los activos {i}, {j}
+
+            \vspace{2mm}El objetivo de la optimización del portafolio es resolver el siguiente problema de programación cuadrática:
+
+            \begin{center}
+                $\underset{w}{\mathrm{min}}\frac{1}{2}{w}^{t}\Sigma w$ sujeto a ${w}^{t}1=1$, ${w}_{i}\ge 0$     
+            \end{center}
+
+            \vspace{2mm}donde $\Sigma $ es la matriz de covarianzas y ${w}$ representa el vector de pesos.
+
+            \vspace{2mm}La optimización de portafolios según Markowitz se enfrenta a varios desafíos prácticos, entre ellos:
+
+            \begin{itemize}
+                \item \textbf{Dimensionalidad alta:} A medida que crece el número de  activos en el portafolio, la complejidad computacional de la optimización crece exponencialmente debido a la necesidad de calcular las covarianzas entre los activos.
+                \item \textbf{Inestabilidad de los parámetros:} Las estimaciones de rendimientos y covarianzas son frecuentemente volátiles, afectando la robustez de las soluciones.
+                \item \textbf{Costos de transacción y restricciones prácticas:} Los modelos clásicos no consideran costos de transacción ni restricciones de mercado, lo que limita su aplicabilidad \cite{Deb2001}.
+            \end{itemize}
+
+            \noindent Para abordar estas limitaciones, se han propuesto enfoques avanzados que incluyen algoritmos heurísticos y metaheurísticos, así como modelos robustos que tienen en cuenta la incertidumbre de los parámetros.
+
+            Los algoritmos metaheurísticos, como los \textbf{algoritmos genéticos (GA)}, el \textbf{recocido simulado (simulated annealing)} y el \textbf{algoritmo de colonia de hormigas}, han demostrado ser eficaces para abordar la optimización de portafolios en escenarios complejos y no lineales. Estos enfoques no garantizan una solución óptima global, pero tienen la ventaja de explorar de manera eficiente grandes espacios de búsqueda \cite{Dorigo2004, Kirkpatrick1983}.
+            \begin{itemize}
+                \item \textbf{Algoritmos Genéticos}: Utilizan principios de evolución biológica y se destacan en problemas con restricciones no lineales \cite{Deb2001}.
+                \item \textbf{Recocido Simulado}: Inspirado en el enfriamiento de metales, permite escapar de óptimos locales y realizar una exploración más profunda del espacio de soluciones \cite{Kirkpatrick1983}.
+                \item \textbf{Algoritmo de Colonia de Hormigas}: Emula el comportamiento colectivo de las hormigas y ha mostrado buenos resultados en problemas con restricciones de cardinalidad y costos de transacción \cite{Dorigo2004}.
+            \end{itemize}
+
+            \noindent Estas técnicas permiten abordar de manera eficiente problemas que involucran múltiples restricciones y objetivos, proporcionando una mejora en la robustez de las soluciones en comparación con los enfoques tradicionales.
+
+            \vspace{2mm}\noindent Además de los enfoques metaheurísticos, los modelos robustos han ganado popularidad en los últimos años. Estos modelos abordan la incertidumbre en las estimaciones de los parámetros, utilizando técnicas como el enfoque de conjuntos robustos para considerar una gama de escenarios adversos en la optimización del portafolio .
+            El enfoque robusto busca soluciones que sean menos sensibles a las variaciones de los datos de entrada, lo que es especialmente útil en mercados financieros volátiles \cite{BenTal2009}.
+
     \section{Heurística}
         \subsection{Método Johnson}
             El método de Johnson se presenta como una heurística desarrollada para resolver problemas de secuenciación de tareas y planificación, especialmente aquellos donde se busca optimizar el tiempo total de procesamiento en un sistema. En este contexto, el término \textit{heurística} implica que el método de Johnson no necesariamente garantiza la solución óptima en todos los escenarios, sino que ofrece una aproximación que logra un equilibrio entre la calidad de la solución y el costo computacional. Esto es particularmente útil cuando el problema es de gran escala, lo que hace inviable analizar todas las soluciones posibles.
@@ -262,18 +277,38 @@
             Aplicado a la planificación de redes eléctricas, el método de Johnson permite la asignación eficiente de puntos de demanda a subestaciones mediante una secuencia que minimiza el tiempo y los costos operacionales. En el análisis de Breda y Mestria~\cite{Breda2023}, el método Johnson se emplea específicamente para estructurar la red eléctrica de forma óptima. La heurística de Johnson asigna cada punto de demanda a una subestación cercana de acuerdo con una secuencia de decisiones que minimiza el costo incremental. Esto, a su vez, logra una asignación balanceada que mantiene una operación estable y confiable en la red. Según el estudio, este método heurístico ofrece una solución eficiente y de alta calidad, lo que lo convierte en una herramienta poderosa para abordar problemas de gran escala en el ámbito de la optimización de redes.
 
         \subsection{Algoritmos Genéticos}
-            Los algoritmos metaheurísticos, como los \textbf{algoritmos genéticos (GA)}, el \textbf{recocido simulado (simulated annealing)} y el \textbf{algoritmo de colonia de hormigas}, han demostrado ser eficaces para abordar la optimización de portafolios en escenarios complejos y no lineales. Estos enfoques no garantizan una solución óptima global, pero tienen la ventaja de explorar de manera eficiente grandes espacios de búsqueda.
-            \begin{itemize}
-                \item \textbf{Algoritmos Genéticos:} Utilizan principios de evolución biológica para generar y seleccionar soluciones candidatas. Han sido aplicados con éxito en la optimización de portafolios bajo restricciones no lineales y considerando múltiples objetivos .
-                \item \textbf{Recocido Simulado:} Inspirado en el proceso de enfriamiento de los metales, este algoritmo permite escapar de óptimos locales, ofreciendo una mejor exploración del espacio de soluciones.
-                \item \textbf{Algoritmo de Colonia de Hormigas:} Este enfoque, basado en el comportamiento colectivo de las hormigas, ha sido aplicado para encontrar soluciones óptimas en portafolios sujetos a restricciones de cardinalidad y costos de transacción .
-            \end{itemize}
-        
-            \noindent Estas técnicas permiten abordar de manera eficiente problemas que involucran múltiples restricciones y objetivos, proporcionando una mejora en la robustez de las soluciones en comparación con los enfoques tradicionales.
-        
-            \vspace{2mm}\noindent Además de los enfoques metaheurísticos, los modelos robustos han ganado popularidad en los últimos años. Estos modelos abordan la incertidumbre en las estimaciones de los parámetros, utilizando técnicas como el enfoque de conjuntos robustos para considerar una gama de escenarios adversos en la optimización del portafolio .
-            El enfoque robusto busca soluciones que sean menos sensibles a las variaciones de los datos de entrada, lo que es especialmente útil en mercados financieros volátiles.
-    
+            Los Algoritmos Genéticos \textbf{(Genetic Algorithms, GA)} \cite{Michalewicz1999, Back1997, Diaz1996} son una familia de modelos computacionales inspirados en los mecanismos de herencia y evolución natural.\vspace{1mm} \\ 
+            Mediante una imitación del mecanismo genético de los organismos biológicos, los algoritmos genéticos exploran el espacio de soluciones asociado a un determinado problema. Se establece una codificación apropiada de las soluciones del espacio de búsqueda y una forma de evaluar la función objetivo para cada una de estas codificaciones. Las soluciones se identifican con individuos que pueden formar parte de la población de búsqueda. La codificación de una solución se interpreta como el cromosoma del individuo compuesto de un cierto número de genes a los que les corresponden ciertos alelos. El gen es la característica del problema; alelo, el valor de la característica; genotipo, la estructura y fenotipo, la estructura sometida al problema. Cada cromosoma es una estructura de datos que representa una de las posibles soluciones del espacio de búsqueda del problema. Los cromosomas son sometidos a un proceso de evolución que envuelve evaluación, selección, recombinación sexual o cruce y mutación. Después de varios ciclos de evolución la población deberá contener individuos más aptos.
+            Se consideran dos operaciones básicas: \textbf{\textit{la mutación}} y \textbf{\textit{el cruce}}. La mutación de un individuo consiste en modificar uno o varios genes cambiando al azar el alelo correspondiente. El cruce de dos individuos, llamados padres, produce un individuo hijo tomando un numero $k$ (elegido al azar) de genes de uno de los padres y los $t-k$ del otro. La población evoluciona de acuerdo a las estrategias de selección de individuos, tanto para las operaciones como para la supervivencia. La selección se puede hacer simulando una lucha entre los individuos de la población con un procedimiento que, dados dos individuos, selecciona uno de ellos teniendo en cuenta su valoración (la función objetivo) y la adaptación al ambiente y a la población (criterios de diversidad, representatividad).
+
+            Mediante una imitación de este mecanismo, los algoritmos genéticos exploran el espacio de soluciones asociado a un determinado problema. \textbf{Algoritthm} \ref{alg:AG} presenta el esquema básico del algoritmo genético. En cada iteración $t$, se mantiene una población de individuos $P\left(t\right)=\left\{{x}_{1}^{t},\cdots, {x}_{n}^{t}\right\}$ donde cada individuo representa una potencial solución del problema a resolver. Cada solución ${x}_{1}^{t}$ se evalúa para obtener cierta medida de su calidad o fitness. Luego, se genera una nueva población $P\left(t + 1\right)$ tomando como base a los mejores individuos; algunos de los cuales sufren transformaciones a partir de la aplicación de operadores “genéticos”.
+            
+            \begin{algorithm}
+                \caption{Esquema básico de un Algoritmo Genético}
+                \begin{algorithmic}[1]
+                \Procedure{AG}{}
+                \State $t \gets 0$
+                \State inicializar$(P(t))$
+                \State evaluar$(P(t))$
+                \While{no-finalizacion}
+                    \State $t \gets t + 1$
+                    \State Seleccionar $P(t)$ desde $P(t-1)$
+                    \State Hacer-Cruzamientos$(P(t))$
+                    \State Aplicar-Mutaciones$(P(t))$
+                \EndWhile
+                \State \textbf{return} mejor solución
+                \EndProcedure
+                \end{algorithmic}
+                \label{alg:AG}
+            \end{algorithm}
+
+
+            Típicamente, estos operadores son: cruzamiento o crossover (nuevos individuos son generados a partir de la combinación de dos o más individuos), y mutación (nuevos individuos son generados a partir de pequeños cambios en un individuo).
+            La idea intuitiva del operador de cruce es permitir el intercambio de información entre individuos de la población. La mutación, en cambio, permite incorporar nueva información que no se puede generar a partir de la clausura transitiva del cruce sobre la población.
+            Se puede entender el mecanismo de selección si se plantea cada iteración del Algoritmo
+            Genético como un proceso en dos etapas. En la primera, se aplica algún mecanismo de selección sobre la “población actual” para crear una “población intermedia”; y en la segunda etapa, a partir de esta población, se aplica cruce y mutación para generar una “nueva población”.
+            El resultado del proceso de selección es un conjunto de entrecruzamiento formado por los mejores individuos de la población. En base a ellos, la etapa de cruce elegirá a los padres y generará a los hijos; sobre la salida de esta etapa, se ejecutará la etapa de mutación. La nueva población puede estar formada solamente por los hijos, o por padres e hijos en alguna proporción adecuada.
+
         \subsection{Algoritmos Greedy}
             El método \textit{greedy} es una heurística que se destaca en problemas de optimización combinatoria debido a su enfoque basado en decisiones inmediatas y locales. La esencia de este método radica en seleccionar, en cada etapa del proceso, la opción que parece más ventajosa en ese momento, es decir, la que maximiza el beneficio o minimiza el costo de forma inmediata, sin analizar el impacto que dicha elección puede tener en etapas futuras. Este enfoque no asegura que se alcance siempre la solución óptima global; sin embargo, es sumamente útil para problemas en los que el análisis de todas las combinaciones posibles sería impráctico o consumiría demasiados recursos.
             \par\medskip
@@ -299,7 +334,6 @@
         \begin{itemize}
             \item Las soluciones clasicas son optimas siempre y cuando no se tengan que analizar grandes cantidades de datos de ser el caso pasamos a un tiempo computacional fuera de las posibilidades y entendimiento humano por lo que se tiene que explorar otras soluciones que esten refenrenciadas en tiempo humano.
             \item Los algoritmos heurísticos se han mostrado efectivos para resolver problemas complejos en diversos contextos, ofreciendo soluciones escalables y eficientes. Al aplicar estas técnicas, es posible superar limitaciones de costo computacional y disponibilidad de datos, creando modelos que se adaptan bien a condiciones cambiantes y que permiten optimizar tanto el rendimiento como la capacidad de respuesta ante desafíos específicos. Estos casos de éxito subrayan la importancia de la heurística como herramienta fundamental en la búsqueda de soluciones prácticas y de alta eficiencia.
-            \item conclusion 3
             \item De los casos de éxito se llega a la conclusión que se puede aplicar heurística en diferente entornos y problemas, mediante el desarrollo de algoritmos heurísticos se puede desarrollar soluciones escalables y eficientes, a modo de ejemplo el caso de Netflix que mediante estos algoritmos pudo entrenar un modelo de ML mucho más grande y solucionar el problema de fraude en su plataforma, también el caso de Dropbox que pudo desarrollar una funcionalidad para el usuario final brindando facilidad en la navegación entre los archivos de su plataforma.
         \end{itemize}
 %----------------------------------------------------------

@@ -19,6 +19,138 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global}
+    \entry{Kirkpatrick1983}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7872b231407c202bb66a9588eac3de57}{%
+           family={Kirkpatrick},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e003731305cfe4ccfbfc1e00b8d98686}{%
+           family={Gelatt},
+           familyi={G\bibinitperiod},
+           given={C.\bibnamedelimi D.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=3d96d611a1c8ced8032677fa2b5020b6}{%
+           family={Vecchi},
+           familyi={V\bibinitperiod},
+           given={M.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e64604b17f2f25156bbf67444c2ae54}
+      \strng{fullhash}{4e64604b17f2f25156bbf67444c2ae54}
+      \strng{bibnamehash}{4e64604b17f2f25156bbf67444c2ae54}
+      \strng{authorbibnamehash}{4e64604b17f2f25156bbf67444c2ae54}
+      \strng{authornamehash}{4e64604b17f2f25156bbf67444c2ae54}
+      \strng{authorfullhash}{4e64604b17f2f25156bbf67444c2ae54}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{4598}
+      \field{title}{Optimization by simulated annealing}
+      \field{volume}{220}
+      \field{year}{1983}
+      \field{pages}{671\bibrangedash 680}
+      \range{pages}{10}
+    \endentry
+    \entry{Deb2001}{book}{}
+      \name{author}{1}{}{%
+        {{hash=df5a5b37a49a0efc2943922fa4aa9f13}{%
+           family={Deb},
+           familyi={D\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chichester}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{df5a5b37a49a0efc2943922fa4aa9f13}
+      \strng{fullhash}{df5a5b37a49a0efc2943922fa4aa9f13}
+      \strng{bibnamehash}{df5a5b37a49a0efc2943922fa4aa9f13}
+      \strng{authorbibnamehash}{df5a5b37a49a0efc2943922fa4aa9f13}
+      \strng{authornamehash}{df5a5b37a49a0efc2943922fa4aa9f13}
+      \strng{authorfullhash}{df5a5b37a49a0efc2943922fa4aa9f13}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multi-Objective Optimization Using Evolutionary Algorithms}
+      \field{year}{2001}
+    \endentry
+    \entry{Dorigo2004}{book}{}
+      \name{author}{2}{}{%
+        {{hash=d1ad206d110b9398571ff21dbdf38e32}{%
+           family={Dorigo},
+           familyi={D\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=75f488d7af4f911c688c2d790343ca86}{%
+           family={Stützle},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{fcb5b2ea2d3ac573c7835c361db3981a}
+      \strng{fullhash}{fcb5b2ea2d3ac573c7835c361db3981a}
+      \strng{bibnamehash}{fcb5b2ea2d3ac573c7835c361db3981a}
+      \strng{authorbibnamehash}{fcb5b2ea2d3ac573c7835c361db3981a}
+      \strng{authornamehash}{fcb5b2ea2d3ac573c7835c361db3981a}
+      \strng{authorfullhash}{fcb5b2ea2d3ac573c7835c361db3981a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ant Colony Optimization}
+      \field{year}{2004}
+    \endentry
+    \entry{BenTal2009}{book}{}
+      \name{author}{3}{}{%
+        {{hash=810927475e856cbaefc5cdebe87cf96a}{%
+           family={Ben-Tal},
+           familyi={B\bibinithyphendelim T\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=58f339da6358ae73a7d6f2a8d768c169}{%
+           family={El\bibnamedelima Ghaoui},
+           familyi={E\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=282ecf2c6791713a21aed06539f155a4}{%
+           family={Nemirovski},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Princeton, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{0910e8987a3af7f5ebbcf8e65b517bb1}
+      \strng{fullhash}{0910e8987a3af7f5ebbcf8e65b517bb1}
+      \strng{bibnamehash}{0910e8987a3af7f5ebbcf8e65b517bb1}
+      \strng{authorbibnamehash}{0910e8987a3af7f5ebbcf8e65b517bb1}
+      \strng{authornamehash}{0910e8987a3af7f5ebbcf8e65b517bb1}
+      \strng{authorfullhash}{0910e8987a3af7f5ebbcf8e65b517bb1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Robust Optimization}
+      \field{year}{2009}
+    \endentry
     \entry{Morimoto2014}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=3feddb92ac574742ba8dac0f6760f98a}{%
