@@ -80,6 +80,34 @@
       \verb 10.1109/COMPSACW.2014.99
       \endverb
     \endentry
+    \entry{PredictFile}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=505a5bc5aa4cbf853994707d99f52dee}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Neeraj},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{505a5bc5aa4cbf853994707d99f52dee}
+      \strng{fullhash}{505a5bc5aa4cbf853994707d99f52dee}
+      \strng{bibnamehash}{505a5bc5aa4cbf853994707d99f52dee}
+      \strng{authorbibnamehash}{505a5bc5aa4cbf853994707d99f52dee}
+      \strng{authornamehash}{505a5bc5aa4cbf853994707d99f52dee}
+      \strng{authorfullhash}{505a5bc5aa4cbf853994707d99f52dee}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{Using machine learning to predict what file you need next}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://dropbox.tech/machine-learning/content-suggestions-machine-learning
+      \endverb
+      \verb{url}
+      \verb https://dropbox.tech/machine-learning/content-suggestions-machine-learning
+      \endverb
+    \endentry
     \entry{Mari2020}{article}{}
       \name{author}{1}{}{%
         {{hash=d710c8db1cd4f6387ac3e9ea5766ea95}{%
@@ -101,6 +129,49 @@
       \field{journaltitle}{Journal of Optimization}
       \field{title}{Aplicación de métodos Greedy en problemas NP-hard}
       \field{year}{2020}
+    \endentry
+    \entry{FraudDetection}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=99cd227e5e428334574d378fe2e168a8}{%
+           family={Esmaeilzadeh},
+           familyi={E\bibinitperiod},
+           given={Soheil},
+           giveni={S\bibinitperiod}}}%
+        {{hash=340d9015a5d7098a6db9f674775a630f}{%
+           family={Salajegheh},
+           familyi={S\bibinitperiod},
+           given={Negin},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3fbd34fb3e86861560c11041c8d08777}{%
+           family={Ziai},
+           familyi={Z\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3c8d4d5e4139ba8ac2f1634a1e20c3ef}{%
+           family={Boote},
+           familyi={B\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2bc3ca5809e77b08cff2b39c9163edcd}
+      \strng{fullhash}{f2f1fcfa82b09bed4e0a0a793b9b5c4c}
+      \strng{bibnamehash}{f2f1fcfa82b09bed4e0a0a793b9b5c4c}
+      \strng{authorbibnamehash}{f2f1fcfa82b09bed4e0a0a793b9b5c4c}
+      \strng{authornamehash}{2bc3ca5809e77b08cff2b39c9163edcd}
+      \strng{authorfullhash}{f2f1fcfa82b09bed4e0a0a793b9b5c4c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{Abuse and Fraud Detection in Streaming Services Using Heuristic-Aware Machine Learning}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2203.02124
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2203.02124
+      \endverb
     \endentry
     \entry{Breda2023}{article}{}
       \name{author}{2}{}{%
