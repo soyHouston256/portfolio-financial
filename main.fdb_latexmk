@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1729909398.82409 "main.bcf" "main.bbl" "main" 1729909469.76846 0
-  "main.bcf" 1729909469.521 109063 55659e036f6a82b33668ea480f0c05ba "pdflatex"
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1729911590.27583 -1
+  "main.bcf" 1729911590.02391 109063 55659e036f6a82b33668ea480f0c05ba "pdflatex"
   "rho.bib" 1729908082.68216 3402 cf2bf60aed23e47a2aea839b5aa4ec5f ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1729909467.34342 "/Users/maxhoustonramirezmartel/code/personales/latex/utec/main.tex" "main.pdf" "main" 1729909469.7688 0
-  "/Users/maxhoustonramirezmartel/code/personales/latex/utec/main.tex" 1729909467.10176 30185 f9b9b4e2343943f87a2423a1fb08ba26 ""
+["pdflatex"] 1729911587.86475 "/Users/maxhoustonramirezmartel/code/personales/latex/utec/main.tex" "main.pdf" "main" 1729911590.27614 0
+  "/Users/maxhoustonramirezmartel/code/personales/latex/utec/main.tex" 1729911587.62836 30416 f62ff696536d1edb45ffd87ff1d70459 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathcal.enc" 1610747736 3356 2818ff063f8b5d0d850e1203330b9fda ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathex.enc" 1610747736 3374 7b7c21d9493820ef4980dfa6fd22840f ""
@@ -339,11 +339,11 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1729824694 8221430 284309eff61862a6035c0a1434040c4f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "figures/grafo.pdf" 1729836488.52919 18587 4a8928478bb2db94d8d444caef853ec3 ""
-  "main.aux" 1729909469.51449 10455 f89eaecbc6ea0dfc0683eb980071c043 "pdflatex"
+  "main.aux" 1729911590.01754 10455 53f0e3177ab2c2833cc0a17dad95f917 "pdflatex"
   "main.bbl" 1729909401.51784 18475 48b729d1306960d470fca4d77498f22f "biber main"
-  "main.run.xml" 1729909469.52185 2395 d1d287e5967c0ad996a37ca784536b54 "pdflatex"
-  "main.tex" 1729909467.10176 30185 f9b9b4e2343943f87a2423a1fb08ba26 ""
-  "main.toc" 1729909469.52195 1204 947336218cf10609e80e84c4fdfe71d3 "pdflatex"
+  "main.run.xml" 1729911590.02503 2395 d1d287e5967c0ad996a37ca784536b54 "pdflatex"
+  "main.tex" 1729911587.62836 30416 f62ff696536d1edb45ffd87ff1d70459 ""
+  "main.toc" 1729911590.02514 1204 947336218cf10609e80e84c4fdfe71d3 "pdflatex"
   "rho-class/rho.cls" 1729906568.25007 16878 c563e3359389cc92dda0efbb48d0f9d3 ""
   "rho-class/rhobabel.sty" 1729820231.99976 3043 bce4f61aa7159e31b74138540249a313 ""
   "rho-class/rhoenvs.sty" 1729820244.3579 3232 2710b6b553fc2b0389d4c7717dc6bb5a ""
