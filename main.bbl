@@ -55,6 +55,119 @@
       \field{pages}{671\bibrangedash 680}
       \range{pages}{10}
     \endentry
+    \entry{Diaz1996}{book}{}
+      \name{author}{7}{}{%
+        {{hash=367c682bf7b28d48b2efc8fc8e8dde97}{%
+           family={Díaz},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c23600c5d6e06dabd1063fb1dfcc7cba}{%
+           family={Glover},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=4322ca4e1e910d71c4d34afeb519eedc}{%
+           family={Ghaziri},
+           familyi={G\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=135ba08b7e8f04456787a055556740de}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=746d36c0a7db24912749134a9481569c}{%
+           family={Laguna},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=136ba1035c6e27f445ffb9988f5b17d1}{%
+           family={Moscato},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=01644790c0921c128644706bed4862c0}{%
+           family={Tseng},
+           familyi={T\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Ed. Paraninfo}%
+      }
+      \strng{namehash}{5d96339637063f6173f539dab70c28fd}
+      \strng{fullhash}{14b0f2ed5adbd788114cc019fcb2c456}
+      \strng{bibnamehash}{5d96339637063f6173f539dab70c28fd}
+      \strng{authorbibnamehash}{5d96339637063f6173f539dab70c28fd}
+      \strng{authornamehash}{5d96339637063f6173f539dab70c28fd}
+      \strng{authorfullhash}{14b0f2ed5adbd788114cc019fcb2c456}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Optimización Heurística y Redes Neuronales}
+      \field{year}{1996}
+    \endentry
+    \entry{Back1997}{book}{}
+      \name{author}{3}{}{%
+        {{hash=a341825a3d37b5d7b0f23625c5fe25aa}{%
+           family={Bäck},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9887d7f7b4aff929dd60fc0e8d0a7712}{%
+           family={Fogel},
+           familyi={F\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f8ddcaba3477f0adbf4f08d891669b3a}{%
+           family={Michalewicz},
+           familyi={M\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Physics Publishing}%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{c7f889157aaa2acef22b46842943a1d9}
+      \strng{fullhash}{c7f889157aaa2acef22b46842943a1d9}
+      \strng{bibnamehash}{c7f889157aaa2acef22b46842943a1d9}
+      \strng{authorbibnamehash}{c7f889157aaa2acef22b46842943a1d9}
+      \strng{authornamehash}{c7f889157aaa2acef22b46842943a1d9}
+      \strng{authorfullhash}{c7f889157aaa2acef22b46842943a1d9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Handbook of Evolutionary Computation}
+      \field{year}{1997}
+    \endentry
+    \entry{Michalewicz1999}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f8ddcaba3477f0adbf4f08d891669b3a}{%
+           family={Michalewicz},
+           familyi={M\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Verlag}%
+      }
+      \strng{namehash}{f8ddcaba3477f0adbf4f08d891669b3a}
+      \strng{fullhash}{f8ddcaba3477f0adbf4f08d891669b3a}
+      \strng{bibnamehash}{f8ddcaba3477f0adbf4f08d891669b3a}
+      \strng{authorbibnamehash}{f8ddcaba3477f0adbf4f08d891669b3a}
+      \strng{authornamehash}{f8ddcaba3477f0adbf4f08d891669b3a}
+      \strng{authorfullhash}{f8ddcaba3477f0adbf4f08d891669b3a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Genetic Algorithms + Data Structures = Evolution Programs}
+      \field{year}{1999}
+    \endentry
     \entry{Deb2001}{book}{}
       \name{author}{1}{}{%
         {{hash=df5a5b37a49a0efc2943922fa4aa9f13}{%
@@ -212,34 +325,6 @@
       \verb 10.1109/COMPSACW.2014.99
       \endverb
     \endentry
-    \entry{PredictFile}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=505a5bc5aa4cbf853994707d99f52dee}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Neeraj},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{fullhash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{bibnamehash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{authorbibnamehash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{authornamehash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{authorfullhash}{505a5bc5aa4cbf853994707d99f52dee}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{05}
-      \field{title}{Using machine learning to predict what file you need next}
-      \field{year}{2019}
-      \verb{urlraw}
-      \verb https://dropbox.tech/machine-learning/content-suggestions-machine-learning
-      \endverb
-      \verb{url}
-      \verb https://dropbox.tech/machine-learning/content-suggestions-machine-learning
-      \endverb
-    \endentry
     \entry{Mari2020}{article}{}
       \name{author}{1}{}{%
         {{hash=d710c8db1cd4f6387ac3e9ea5766ea95}{%
@@ -262,7 +347,7 @@
       \field{title}{Aplicación de métodos Greedy en problemas NP-hard}
       \field{year}{2020}
     \endentry
-    \entry{FraudDetection}{misc}{}
+    \entry{Esmaeilzadeh2022}{misc}{}
       \name{author}{4}{}{%
         {{hash=99cd227e5e428334574d378fe2e168a8}{%
            family={Esmaeilzadeh},
@@ -362,6 +447,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{PredictFile}
 \endrefsection
 \endinput
 
