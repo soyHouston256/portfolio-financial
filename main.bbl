@@ -19,97 +19,101 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global}
-    \entry{Kumar2019}{misc}{}
+    \entry{Markowitz1952}{article}{}
       \name{author}{1}{}{%
-        {{hash=505a5bc5aa4cbf853994707d99f52dee}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Neeraj},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{fullhash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{bibnamehash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{authorbibnamehash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{authornamehash}{505a5bc5aa4cbf853994707d99f52dee}
-      \strng{authorfullhash}{505a5bc5aa4cbf853994707d99f52dee}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{05}
-      \field{title}{Using machine learning to predict what file you need next}
-      \field{year}{2019}
-      \verb{urlraw}
-      \verb https://dropbox.tech/machine-learning/content-suggestions-machine-learning
-      \endverb
-      \verb{url}
-      \verb https://dropbox.tech/machine-learning/content-suggestions-machine-learning
-      \endverb
-    \endentry
-    \entry{Mari2020}{article}{}
-      \name{author}{1}{}{%
-        {{hash=d710c8db1cd4f6387ac3e9ea5766ea95}{%
-           family={Mari},
+        {{hash=1c2160de6c39796b2b5f45d8f6a9bfff}{%
+           family={Markowitz},
            familyi={M\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
+           given={H.},
+           giveni={H\bibinitperiod}}}%
       }
-      \strng{namehash}{d710c8db1cd4f6387ac3e9ea5766ea95}
-      \strng{fullhash}{d710c8db1cd4f6387ac3e9ea5766ea95}
-      \strng{bibnamehash}{d710c8db1cd4f6387ac3e9ea5766ea95}
-      \strng{authorbibnamehash}{d710c8db1cd4f6387ac3e9ea5766ea95}
-      \strng{authornamehash}{d710c8db1cd4f6387ac3e9ea5766ea95}
-      \strng{authorfullhash}{d710c8db1cd4f6387ac3e9ea5766ea95}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \strng{namehash}{1c2160de6c39796b2b5f45d8f6a9bfff}
+      \strng{fullhash}{1c2160de6c39796b2b5f45d8f6a9bfff}
+      \strng{bibnamehash}{1c2160de6c39796b2b5f45d8f6a9bfff}
+      \strng{authorbibnamehash}{1c2160de6c39796b2b5f45d8f6a9bfff}
+      \strng{authornamehash}{1c2160de6c39796b2b5f45d8f6a9bfff}
+      \strng{authorfullhash}{1c2160de6c39796b2b5f45d8f6a9bfff}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Optimization}
-      \field{title}{Aplicación de métodos Greedy en problemas NP-hard}
-      \field{year}{2020}
-    \endentry
-    \entry{Esmaeilzadeh2022}{misc}{}
-      \name{author}{4}{}{%
-        {{hash=99cd227e5e428334574d378fe2e168a8}{%
-           family={Esmaeilzadeh},
-           familyi={E\bibinitperiod},
-           given={Soheil},
-           giveni={S\bibinitperiod}}}%
-        {{hash=340d9015a5d7098a6db9f674775a630f}{%
-           family={Salajegheh},
-           familyi={S\bibinitperiod},
-           given={Negin},
-           giveni={N\bibinitperiod}}}%
-        {{hash=3fbd34fb3e86861560c11041c8d08777}{%
-           family={Ziai},
-           familyi={Z\bibinitperiod},
-           given={Amir},
-           giveni={A\bibinitperiod}}}%
-        {{hash=3c8d4d5e4139ba8ac2f1634a1e20c3ef}{%
-           family={Boote},
-           familyi={B\bibinitperiod},
-           given={Jeff},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{2bc3ca5809e77b08cff2b39c9163edcd}
-      \strng{fullhash}{f2f1fcfa82b09bed4e0a0a793b9b5c4c}
-      \strng{bibnamehash}{f2f1fcfa82b09bed4e0a0a793b9b5c4c}
-      \strng{authorbibnamehash}{f2f1fcfa82b09bed4e0a0a793b9b5c4c}
-      \strng{authornamehash}{2bc3ca5809e77b08cff2b39c9163edcd}
-      \strng{authorfullhash}{f2f1fcfa82b09bed4e0a0a793b9b5c4c}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{03}
-      \field{title}{Abuse and Fraud Detection in Streaming Services Using Heuristic-Aware Machine Learning}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2203.02124
+      \field{journaltitle}{The Journal of Finance}
+      \field{number}{1}
+      \field{title}{Portfolio Selection}
+      \field{volume}{7}
+      \field{year}{1952}
+      \field{pages}{77\bibrangedash 91}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1111/j.1540-6261.1952.tb01525.x
       \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2203.02124
+    \endentry
+    \entry{Sharpe1966}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7713eaeb6845785b0f6bb5cffab120d1}{%
+           family={Sharpe},
+           familyi={S\bibinitperiod},
+           given={William\bibnamedelima F.},
+           giveni={W\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{7713eaeb6845785b0f6bb5cffab120d1}
+      \strng{fullhash}{7713eaeb6845785b0f6bb5cffab120d1}
+      \strng{bibnamehash}{7713eaeb6845785b0f6bb5cffab120d1}
+      \strng{authorbibnamehash}{7713eaeb6845785b0f6bb5cffab120d1}
+      \strng{authornamehash}{7713eaeb6845785b0f6bb5cffab120d1}
+      \strng{authorfullhash}{7713eaeb6845785b0f6bb5cffab120d1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Business}
+      \field{number}{1}
+      \field{title}{Mutual Fund Performance}
+      \field{volume}{39}
+      \field{year}{1966}
+      \field{pages}{119\bibrangedash 138}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1086/294846
+      \endverb
+    \endentry
+    \entry{Rubio-Garcia2022}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=2ec830c285cc78a03fadbada1ce21daf}{%
+           family={Rubio-García},
+           familyi={R\bibinithyphendelim G\bibinitperiod},
+           given={Álvaro},
+           giveni={Á\bibinitperiod}}}%
+        {{hash=9954bf70780dd0d8c2244e40ebcbd628}{%
+           family={García-Ripoll},
+           familyi={G\bibinithyphendelim R\bibinitperiod},
+           given={Juan\bibnamedelima José},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=da5bdee0d0075675b8c0b0f4ffbb165c}{%
+           family={Porras},
+           familyi={P\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ecd4d085ab00c4b571d2807028f4001}
+      \strng{fullhash}{0ecd4d085ab00c4b571d2807028f4001}
+      \strng{bibnamehash}{0ecd4d085ab00c4b571d2807028f4001}
+      \strng{authorbibnamehash}{0ecd4d085ab00c4b571d2807028f4001}
+      \strng{authornamehash}{0ecd4d085ab00c4b571d2807028f4001}
+      \strng{authorfullhash}{0ecd4d085ab00c4b571d2807028f4001}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{q-fin.PM}
+      \field{eprinttype}{arXiv}
+      \field{title}{Portfolio Optimization with Discrete Simulated Annealing}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.48550/arXiv.2210.00807
+      \endverb
+      \verb{eprint}
+      \verb 2210.00807
       \endverb
     \endentry
   \enddatalist

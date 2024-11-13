@@ -712,7 +712,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2te
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text-bold.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text-bold.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -731,7 +730,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvro8t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvro8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathit.enc
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -742,6 +740,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmtt9.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmtt8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text-bold.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text-bold.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/stix2-type1/t1-stix2text-bold.tfm
@@ -749,12 +748,23 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathit.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathrm-bold.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8t.tfm
+INPUT ./figures/exe_time.pdf
+INPUT ./figures/exe_time.pdf
+INPUT ./figures/exe_time.pdf
+INPUT ./figures/exe_time.pdf
+INPUT ./figures/exe_time.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvbo8t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8r.tfm
+INPUT ./figures/exe_fitness.pdf
+INPUT ./figures/exe_fitness.pdf
+INPUT ./figures/exe_fitness.pdf
+INPUT ./figures/exe_fitness.pdf
+INPUT ./figures/exe_fitness.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix2-type1/ts1stix2.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix2-type1/ts1stix2.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/stix2-type1/ts1stix2.fd
@@ -776,6 +786,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvr8c.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml

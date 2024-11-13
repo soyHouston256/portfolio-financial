@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1731471314.31127 -1
-  "main.bcf" 1731471314.08093 108080 35f5ec0a9001cb622815e759796d7645 "pdflatex"
-  "rho.bib" 1731461435.00974 3402 cf2bf60aed23e47a2aea839b5aa4ec5f ""
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1731474407.43526 -1
+  "main.bcf" 1731474407.19392 108149 64336ecc37d6d1da93fdb941c4bed3ad "pdflatex"
+  "rho.bib" 1731473632.27993 832 fdeb097d829ac9ffee8b61145b8d2ad2 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1731471312.08882 "/Users/maxhoustonramirezmartel/code/personales/latex/finatial/main.tex" "main.pdf" "main" 1731471314.31153 0
-  "/Users/maxhoustonramirezmartel/code/personales/latex/finatial/main.tex" 1731471309.52071 35857 b1bec7a8e556fb219b0e57d23c2cfc2d ""
+["pdflatex"] 1731474405.13566 "/Users/maxhoustonramirezmartel/code/personales/latex/finatial/main.tex" "main.pdf" "main" 1731474407.43553 0
+  "/Users/maxhoustonramirezmartel/code/personales/latex/finatial/main.tex" 1731474402.56813 36412 fc42030bd60d2de6e0406c6a87a5f80b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathit.enc" 1610747736 3416 3b99a05a42a4705ec5a5521d2bffa072 ""
@@ -15,6 +15,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc" 1610747736 3159 6cd87b3b51190b4d6117d4c2f083ba2e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc" 1610747736 2985 50a8cc5f8d35d60a3a371f6172be1026 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1.enc" 1610747736 7007 7bfc8f72039f2cce6ca911c3c71db584 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc" 1610747736 7017 40d76105290f0e4c158c74ad8614d129 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-ts1.enc" 1610747736 2923 6a3d03919e8648554154ee58dc078229 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -346,11 +347,13 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1729824725.5484 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1729824694 8221430 284309eff61862a6035c0a1434040c4f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "main.aux" 1731471314.0748 10744 0a3eeb55d799d3bd82fed9dec71ea0e1 "pdflatex"
-  "main.bbl" 1731468421.56278 4317 a41856bef4806100bfad5dd3118da1f9 "biber main"
-  "main.run.xml" 1731471314.08171 2395 d1d287e5967c0ad996a37ca784536b54 "pdflatex"
-  "main.tex" 1731471309.52071 35857 b1bec7a8e556fb219b0e57d23c2cfc2d ""
-  "main.toc" 1731471314.08178 1451 9ac5bc239e89a44273e797481ace2004 "pdflatex"
+  "figures/exe_fitness.pdf" 1731472292.2521 51918 75547deb6d7905d444361e252562f89b ""
+  "figures/exe_time.pdf" 1731472292.26024 48145 44afd4874c74cae89cea7da672cf5902 ""
+  "main.aux" 1731474407.18809 9350 b87cf34e9dbf52bea41062aabdb9a394 "pdflatex"
+  "main.bbl" 1731474184.99626 4369 cebe8324f0ff9786c94cfa2ff66493a2 "biber main"
+  "main.run.xml" 1731474407.19478 2395 d1d287e5967c0ad996a37ca784536b54 "pdflatex"
+  "main.tex" 1731474402.56813 36412 fc42030bd60d2de6e0406c6a87a5f80b ""
+  "main.toc" 1731474407.19486 1149 cbb3308d774addcc57b338a993379915 "pdflatex"
   "rho-class/rho.cls" 1731461434.89255 16878 c563e3359389cc92dda0efbb48d0f9d3 ""
   "rho-class/rhobabel.sty" 1731461434.89322 3043 bce4f61aa7159e31b74138540249a313 ""
   "rho-class/rhoenvs.sty" 1731461434.89355 3232 2710b6b553fc2b0389d4c7717dc6bb5a ""

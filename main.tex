@@ -34,7 +34,7 @@
 % TITLE
 %----------------------------------------------------------
 
-\journalname{Practica 01}
+\journalname{Practica 02}
 \title{ Análisis Comparativo: Simulated Annealing vs Hill Climbing en la Optimización de Portafolios Financieros }
 
 %----------------------------------------------------------
@@ -46,9 +46,10 @@
 % \author[3]{Max Houston Ramirez Martel}
 % \author[4]{Harold Mondragon Tavara}
 \author[,$\dagger$]{Alberto Valentín Velásquez Santos}
-\author[,$\dagger$]{Rodolfo Morocho Caballero}
-\author[,$\dagger$]{Max Houston Ramirez Martel}
 \author[,$\dagger$]{Harold Mondragon Tavara}
+\author[,$\dagger$]{Max Houston Ramirez Martel}
+\author[,$\dagger$]{Rodolfo Morocho Caballero}
+
 
 %----------------------------------------------------------
 
@@ -60,8 +61,7 @@
 %----------------------------------------------------------
 % DATES
 %----------------------------------------------------------
-
-\dates{Este archivo fue compilado el 26 de Octubre del 2024}
+\dates{Este archivo fue compilado el 13 de noviembre del 2024}
 
 %----------------------------------------------------------
 % FOOTER INFORMATION
@@ -71,7 +71,7 @@
 \footinfo{Creative Commons CC BY 4.0}
 \smalltitle{\LaTeX\ Template}
 \institution{Universidad de Tecnologia E Ingeniería}
-\theday{October 26, 2024} %\today
+\theday{\DTMnow} %\today
 
 %----------------------------------------------------------
 % ARTICLE INFORMATION
@@ -81,10 +81,10 @@
 % \email{example@organization.com.}
 % \doi{\url{https://www.doi.org/exampledoi/XXXXXXXXXX}}
 
-\received{October 26, 2024}
-\revised{October 26, 2024}
-\accepted{October 26, 2024}
-\published{October 26, 2024}
+\received{noviembre 13, 2024}
+\revised{noviembre 13, 2024}
+\accepted{noviembre 13, 2024}
+\published{noviembre 13, 2024}
 \license{Rho LaTeX Class \ccLogo\ This document is licensed under Creative Commons CC BY 4.0.}
 
 %----------------------------------------------------------
@@ -108,23 +108,14 @@
     \maketitle
     \section{Marco Teórico}
 
-        \rhostart{L}a La optimización de portafolios es una práctica central en las finanzas, enfocada en maximizar el rendimiento ajustado al riesgo de una cartera para un nivel de riesgo dado, o en minimizar el riesgo para un rendimiento específico. Este proceso se fundamenta en los principios de diversificación y equilibrio entre riesgo y retorno, tal como se describe en la teoría de portafolios de Markowitz (1952), que sentó las bases para el análisis moderno de inversiones. En este modelo, la minimización de la varianza de los retornos se combina con la maximización de su media para construir una cartera eficiente, definiendo el riesgo como la volatilidad de los retornos de una cartera y permitiendo que los inversores tomen decisiones informadas en función de su tolerancia al riesgo.
-        Complementando la teoría de Markowitz, el Sharpe Ratio, introducido por William F. Sharpe en 1966, evalúa la eficiencia de una cartera ajustando su rendimiento al riesgo. Este ratio es calculado dividiendo el exceso de retorno de la cartera sobre la tasa libre de riesgo por la desviación estándar de sus retornos. De esta manera, el Sharpe Ratio permite una comparación directa entre carteras al normalizar los retornos en términos del riesgo asumido, consolidándose como una herramienta fundamental para la optimización de portafolios en el ámbito financiero, especialmente cuando se busca maximizar la recompensa obtenida por cada unidad de riesgo.
-        La optimización de portafolios implica complejidades adicionales cuando se introducen restricciones no lineales, como los costos de transacción fijos o los límites en la inversión en unidades discretas. Estas restricciones convierten el problema en uno no convexo, limitando la efectividad de los métodos clásicos como la programación cuadrática y lineal. En este contexto, los algoritmos heurísticos como Hill Climbing (HC) y Simulated Annealing (SA) han surgido como alternativas viables para enfrentar la naturaleza de estas funciones objetivo. HC es un algoritmo de búsqueda local que optimiza la función objetivo mediante ajustes incrementales a una solución inicial. Aunque es rápido en converger hacia un óptimo local, su enfoque determinista lo hace vulnerable a quedar atrapado en estos óptimos, lo que puede ser un obstáculo significativo en problemas complejos de optimización de portafolios, donde las múltiples restricciones generan una superficie de solución con múltiples picos y valles. Simulated Annealing (SA), que permite una exploración más amplia del espacio de soluciones al aceptar soluciones subóptimas en las primeras etapas del proceso. Este enfoque de exploración adaptativa evita que el algoritmo se quede atrapado en óptimos locales, permitiendo una búsqueda más robusta de soluciones óptimas globales, especialmente en problemas de optimización no convexos, como aquellos que incluyen costos fijos de transacción. En el estudio de Rubio-García, García-Ripoll y Porras (2022), se evidencia que SA es particularmente adecuado para la optimización de portafolios en presencia de restricciones complejas. Su estructura estocástica y adaptativa permite reducir el tiempo de búsqueda al explorar eficientemente soluciones subóptimas al inicio, lo que contribuye a la eficacia de este algoritmo en problemas de portafolios discretos. Además, el estudio introduce una métrica de rendimiento denominada "time to target" (tiempo para alcanzar el objetivo), que cuantifica el tiempo requerido para obtener una solución de calidad en términos de una solución que maximiza el Sharpe Ratio, proporcionando una referencia para comparar la eficiencia de SA frente a otros métodos.
+        \rhostart{L}a optimización de portafolios es una práctica central en las finanzas, enfocada en maximizar el rendimiento ajustado al riesgo de una cartera para un nivel de riesgo dado, o en minimizar el riesgo para un rendimiento específico. Este proceso se fundamenta en los principios de diversificación y equilibrio entre riesgo y retorno, tal como se describe en la teoría de portafolios de \cite{Markowitz1952}, que sentó las bases para el análisis moderno de inversiones. En este modelo, la minimización de la varianza de los retornos se combina con la maximización de su media para construir una cartera eficiente, definiendo el riesgo como la volatilidad de los retornos de una cartera y permitiendo que los inversores tomen decisiones informadas en función de su tolerancia al riesgo.
+
+        Complementando la teoría de Markowitz, el Sharpe Ratio, introducido por \cite{Sharpe1966}, evalúa la eficiencia de una cartera ajustando su rendimiento al riesgo. Este ratio es calculado dividiendo el exceso de retorno de la cartera sobre la tasa libre de riesgo por la desviación estándar de sus retornos. De esta manera, el Sharpe Ratio permite una comparación directa entre carteras al normalizar los retornos en términos del riesgo asumido, consolidándose como una herramienta fundamental para la optimización de portafolios en el ámbito financiero, especialmente cuando se busca maximizar la recompensa obtenida por cada unidad de riesgo.
+        
+        La optimización de portafolios implica complejidades adicionales cuando se introducen restricciones no lineales, como los costos de transacción fijos o los límites en la inversión en unidades discretas. Estas restricciones convierten el problema en uno no convexo, limitando la efectividad de los métodos clásicos como la programación cuadrática y lineal. En este contexto, los algoritmos heurísticos como Hill Climbing (HC) y Simulated Annealing (SA) han surgido como alternativas viables para enfrentar la naturaleza de estas funciones objetivo. HC es un algoritmo de búsqueda local que optimiza la función objetivo mediante ajustes incrementales a una solución inicial. Aunque es rápido en converger hacia un óptimo local, su enfoque determinista lo hace vulnerable a quedar atrapado en estos óptimos, lo que puede ser un obstáculo significativo en problemas complejos de optimización de portafolios, donde las múltiples restricciones generan una superficie de solución con múltiples picos y valles. Simulated Annealing (SA), que permite una exploración más amplia del espacio de soluciones al aceptar soluciones subóptimas en las primeras etapas del proceso. Este enfoque de exploración adaptativa evita que el algoritmo se quede atrapado en óptimos locales, permitiendo una búsqueda más robusta de soluciones óptimas globales, especialmente en problemas de optimización no convexos, como aquellos que incluyen costos fijos de transacción. En el estudio de \cite{Rubio-Garcia2022}, se evidencia que SA es particularmente adecuado para la optimización de portafolios en presencia de restricciones complejas. Su estructura estocástica y adaptativa permite reducir el tiempo de búsqueda al explorar eficientemente soluciones subóptimas al inicio, lo que contribuye a la eficacia de este algoritmo en problemas de portafolios discretos. Además, el estudio introduce una métrica de rendimiento denominada "time to target" (tiempo para alcanzar el objetivo), que cuantifica el tiempo requerido para obtener una solución de calidad en términos de una solución que maximiza el Sharpe Ratio, proporcionando una referencia para comparar la eficiencia de SA frente a otros métodos.
+        
         En la comparación entre Hill Climbing y Simulated Annealing, este último muestra una capacidad superior para maximizar el Sharpe Ratio al ser más resistente a los óptimos locales. Esto es esencial en escenarios financieros donde la complejidad de las restricciones y los costos fijos de transacción agregan un nivel adicional de dificultad. Hill Climbing, si bien eficiente en tiempo, resulta limitado en su exploración y podría no encontrar la solución óptima global en problemas de portafolios que incluyen estos componentes no convexos. En este sentido, el uso de SA ofrece una exploración del espacio de soluciones más completa, mientras que Hill Climbing es preferible en situaciones donde se prioriza la rapidez de convergencia sobre una búsqueda exhaustiva.
-
-        \[ \text{Sharpe Ratio} \]
-
-        % Fórmula principal
-        \[ \text{Sharpe Ratio} = \frac{R_x - R_f}{\sigma_{R_x}} \]
-
-        % Donde:
-        \[ \text{Donde:} \]
-        \begin{align*}
-            R_x &= \text{Expected portfolio return} \\
-            R_f &= \text{Risk free rate of return} \\
-            \sigma_{R_x} &= \text{Standard deviation of portfolio return / volatility}
-        \end{align*}
+        
     
     \section{Metodología fitness restricciones}
             
@@ -132,14 +123,6 @@
             En cuanto a la configuración de los algoritmos, Simulated Annealing se ha ajustado con una temperatura inicial alta (x definir) y una tasa de enfriamiento controlada, factores que facilitan la exploración del espacio de soluciones y evitan caer en óptimos locales en las primeras iteraciones. A medida que la temperatura disminuye, el algoritmo se vuelve más.
             conservador, favoreciendo soluciones cada vez más óptimas y menos dispuestas a aceptar cambios que no mejoren el Sharpe Ratio. Para Hill Climbing, el criterio de terminación está definido por la la ausencia de mejoras significativas en iteraciones sucesivas. La naturaleza de Hill Climbing lo lleva a realizar cambios incrementales en la composición del portafolio, en busca de maximizar el Sharpe Ratio de manera rápida pero sin considerar saltos que podrían llevar a un mejor óptimo global, lo cual contrasta con el enfoque de SA.
             Los datos utilizados en este análisis incluyen rendimientos históricos y desviaciones estándar de varios activos (simulados random), permitiendo la simulación de un portafolio diversificado. Este conjunto de datos se elige para representar un horizonte de tiempo específico, capturando la volatilidad y los retornos esperados de cada activo. Los datos se alimentan a ambos algoritmos, lo que permite una comparación homogénea y una composición de activos a elegir iguales con la finalidad de que busquen maximizar el Sharpe Ratio.            La implementación de estos algoritmos se realizó en Python, con diferencias estructurales en el código para adaptarse a las particularidades de cada algoritmo. En el caso de Simulated Annealing, se configuraron funciones para el enfriamiento gradual y la aceptación de soluciones subóptimas en etapas iniciales, mientras que en Hill Climbing se estableció un enfoque de búsqueda directa, permitiendo modificaciones sólo cuando mejoraban el Sharpe Ratio. Este diseño permite una comparación justa y precisa del rendimiento de ambos métodos en condiciones similares.
-
-            % Figure \ref{fig:figure} Grafo con 4 vertices.            
-            % \begin{figure}[H]
-            %     \centering
-            %     \includegraphics[width=0.71\columnwidth]{grafo.pdf}
-            %     \caption{Grafo con 4 vertices}
-            %     \label{fig:figure}
-            % \end{figure}
         \subsection{Fitness}
             El  fitness es una medida que evalúa la calidad de cada solución, es decir, de cada combinación de pesos asignados a los activos en el portafolio con su respectivo retorno esperado ajustado al riesgo que esta conlleva. Es importante mencionar que la función objetivo de nuestro problema es el Sharpe Ratio mencionado anteriormente y se busca maximizar esta métrica.La interpretacion es cuanto mayor sea el Sharpe Ratio, mayor será el retorno ajustado al riesgo, y por lo tanto, mejor será la solución en términos de optimización del portafolio.
             Por cuestiones de practicidad y para lograr tener una comparación de portafolios que lleguen hasta n=500 se optó por generar valores aleatorios controlando el rango que estos pueden optar, asignamos valores que en el mundo financiero son los más comunes. 
@@ -491,9 +474,16 @@ def accept(delta, T):
 %----------------------------------------------------------        
     \section{Conclusiones}
         \begin{itemize}
-            \item Las soluciones clásicas son óptimas siempre y cuando no se tengan que analizar grandes cantidades de datos de ser el caso pasamos a un tiempo computaciónal fuera de las posibilidades y entendimiento humano por lo que se tiene que explorar otras soluciones que estén referenciadas en tiempo humano.
-            \item Los algoritmos heurísticos se han mostrado efectivos para resolver problemas complejos en diversos contextos, ofreciendo soluciones escalables y eficientes. Al aplicar estas técnicas, es posible superar limitaciones de costo computaciónal y disponibilidad de datos, creando modelos que se adaptan bien a condiciones cambiantes y que permiten optimizar tanto el rendimiento como la capacidad de respuesta ante desafíos específicos. Estos casos de éxito subrayan la importancia de la heurística como herramienta fundamental en la búsqueda de soluciones prácticas y de alta eficiencia.
-            \item De los casos de éxito se llega a la conclusión que se puede aplicar heurística en diferente entornos y problemas, mediante el desarrollo de algoritmos heurísticos se puede desarrollar soluciones escalables y eficientes, a modo de ejemplo el caso de Netflix que mediante estos algoritmos pudo entrenar un modelo de ML mucho más grande y solucionar el problema de fraude en su plataforma, también el caso de Dropbox que pudo desarrollar una funcionalidad para el usuario final brindando facilidad en la navegación entre los archivos de su plataforma.
+            \item \textbf{Impacto de los Parámetros en Simulated Annealing:} El rendimiento de \textbf{Simulated Annealing} depende de la configuración de la \textbf{temperatura inicial}, \textbf{temperatura mínima} y \textbf{tasa de enfriamiento}. Evaluar diferentes combinaciones de estos parámetros permite equilibrar la \textbf{exploración} y \textbf{explotación} del espacio de soluciones.
+
+            \item \textbf{Evaluación de Robustez y Consistencia:} Evaluar la robustez de cada método ejecutándolos múltiples veces con distintas condiciones iniciales permite medir la variabilidad en los resultados. \textbf{Simulated Annealing} suele ser más consistente que \textbf{Hill Climbing} debido a su capacidad para escapar de óptimos locales.
+            
+            \item \textbf{Aplicabilidad para Portafolios Diversificados:} \textbf{Hill Climbing} es adecuado para soluciones rápidas y sencillas, mientras que \textbf{Simulated Annealing} es ideal para portafolios más diversificados donde se busca maximizar el rendimiento con una mayor diversidad de activos.
+            
+            \item \textbf{Adaptabilidad a Cambios del Mercado:} \textbf{Simulated Annealing} es más adaptable a las condiciones cambiantes del mercado debido a su enfoque estocástico, lo cual lo hace ideal para contextos con alta incertidumbre.
+            
+            \item \textbf{Aplicación Práctica y Escalabilidad:} \textbf{Hill Climbing} es adecuado para portafolios pequeños a medianos debido a su simplicidad. Para portafolios más grandes, \textbf{Simulated Annealing} ofrece mejores soluciones a pesar de requerir más tiempo de cálculo.
+            
         \end{itemize}
 %----------------------------------------------------------
 % CONTENTS
