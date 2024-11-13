@@ -2366,23 +2366,8 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">rho.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">qiskit2024</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Morimoto2014</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">Deb2001</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Deb2001</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">Dorigo2004</bcf:citekey>
-    <bcf:citekey order="5" intorder="2">Kirkpatrick1983</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Deb2001</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Kirkpatrick1983</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Dorigo2004</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">BenTal2009</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">Breda2023</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Michalewicz1999</bcf:citekey>
-    <bcf:citekey order="11" intorder="2">Back1997</bcf:citekey>
-    <bcf:citekey order="11" intorder="3">Diaz1996</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">Mari2020</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Esmaeilzadeh2022</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Kumar2019</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">Esmaeilzadeh2022</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Kumar2019</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">
