@@ -217,7 +217,7 @@ cov_matrix = np.random.uniform(0.001, 0.002, (n, n))
                 \item Cálculo del Sharpe Ratio (fitness): Finalmente, el Sharpe Ratio se calcula dividiendo el retorno del portafolio entre la desviación estándar del mismo:        
                     \begin{lstlisting}[
                         language=Python,
-                        caption={Cálculo de la varianza del portafolio},
+                        caption={Cálculo Sharpe Ratio(Fitness)},
                         label={lst:portfolio_variance},
                         numbers=none,
                         numberstyle=\tiny\color{gray},
@@ -246,7 +246,7 @@ cov_matrix = np.random.uniform(0.001, 0.002, (n, n))
 
             \begin{lstlisting}[
                 language=Python,
-                caption={vector inicial},
+                caption={Calculo del vector de pesos},
                 label={lst:portfolio_variance},
                 numbers=none,
                 numberstyle=\tiny\color{gray},
@@ -437,7 +437,7 @@ def accept(delta, T):
         \begin{figure}[h]
             \centering
             \includegraphics[width=\linewidth]{figures/exe_time.pdf}
-            \caption{Grafica de comparación de tiempo de ejecuacion de Hill Climbing y Simulated Annealing}
+            \caption{Gráfica de comparación de tiempo de ejecución de Hill Climbing y Simulated Annealing}
             \label{fig:sample_figure}
         \end{figure}
         
@@ -454,7 +454,7 @@ def accept(delta, T):
         \begin{figure}[h]
             \centering
             \includegraphics[width=\linewidth]{figures/Fitness_Comparisson-9x.png}
-            \caption{Grafica de comparación de resultados optimos Hill Climbing y Simulated Annealing para distintos tamaños de portafolio}
+            \caption{Gráfica de comparación de resultados optimos Hill Climbing y Simulated Annealing para distintos tamaños de portafolio}
             \label{fig:sample_figure2}
         \end{figure}
 
