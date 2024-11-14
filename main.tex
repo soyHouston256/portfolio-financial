@@ -21,6 +21,9 @@
 \usepackage{algpseudocode}
 \usepackage{hyperref} % Para manejar URLs
 \usepackage{biblatex} % Para el manejo de bibliografía
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{multirow}
 
 \addbibresource{rho.bib} 
 
@@ -108,11 +111,11 @@
     \maketitle
     \section{Marco Teórico}
 
-        \rhostart{L}a optimización de portafolios es una práctica central en las finanzas, enfocada en maximizar el rendimiento ajustado al riesgo de una cartera para un nivel de riesgo dado, o en minimizar el riesgo para un rendimiento específico. Este proceso se fundamenta en los principios de diversificación y equilibrio entre riesgo y retorno, tal como se describe en la teoría de portafolios de \cite{Markowitz1952}, que sentó las bases para el análisis moderno de inversiones. En este modelo, la minimización de la varianza de los retornos se combina con la maximización de su media para construir una cartera eficiente, definiendo el riesgo como la volatilidad de los retornos de una cartera y permitiendo que los inversores tomen decisiones informadas en función de su tolerancia al riesgo.
+        \rhostart{L}a optimización de portafolios es una práctica central en las finanzas, enfocada en maximizar el rendimiento ajustado al riesgo de una cartera para un nivel de riesgo dado, o en minimizar el riesgo para un rendimiento específico. Este proceso se fundamenta en los principios de diversificación y equilibrio entre riesgo y retorno, tal como se describe en la teoría de portafolios de Markowitz (1952) \cite{Markowitz1952}, que sentó las bases para el análisis moderno de inversiones. En este modelo, la minimización de la varianza de los retornos se combina con la maximización de su media para construir una cartera eficiente, definiendo el riesgo como la volatilidad de los retornos de una cartera y permitiendo que los inversores tomen decisiones informadas en función de su tolerancia al riesgo.
 
-        Complementando la teoría de Markowitz, el Sharpe Ratio, introducido por \cite{Sharpe1966}, evalúa la eficiencia de una cartera ajustando su rendimiento al riesgo. Este ratio es calculado dividiendo el exceso de retorno de la cartera sobre la tasa libre de riesgo por la desviación estándar de sus retornos. De esta manera, el Sharpe Ratio permite una comparación directa entre carteras al normalizar los retornos en términos del riesgo asumido, consolidándose como una herramienta fundamental para la optimización de portafolios en el ámbito financiero, especialmente cuando se busca maximizar la recompensa obtenida por cada unidad de riesgo.
+        Complementando la teoría de Markowitz, el Sharpe Ratio, introducido por William F. Sharpe en 1966, evalúa la eficiencia de una cartera ajustando su rendimiento al riesgo (Sharpe, 1966)\cite{Sharpe1966}. Este ratio es calculado dividiendo el exceso de retorno de la cartera sobre la tasa libre de riesgo por la desviación estándar de sus retornos. De esta manera, el Sharpe Ratio permite una comparación directa entre carteras al normalizar los retornos en términos del riesgo asumido, consolidándose como una herramienta fundamental para la optimización de portafolios en el ámbito financiero, especialmente cuando se busca maximizar la recompensa obtenida por cada unidad de riesgo.
         
-        La optimización de portafolios implica complejidades adicionales cuando se introducen restricciones no lineales, como los costos de transacción fijos o los límites en la inversión en unidades discretas. Estas restricciones convierten el problema en uno no convexo, limitando la efectividad de los métodos clásicos como la programación cuadrática y lineal. En este contexto, los algoritmos heurísticos como Hill Climbing (HC) y Simulated Annealing (SA) han surgido como alternativas viables para enfrentar la naturaleza de estas funciones objetivo. HC es un algoritmo de búsqueda local que optimiza la función objetivo mediante ajustes incrementales a una solución inicial. Aunque es rápido en converger hacia un óptimo local, su enfoque determinista lo hace vulnerable a quedar atrapado en estos óptimos, lo que puede ser un obstáculo significativo en problemas complejos de optimización de portafolios, donde las múltiples restricciones generan una superficie de solución con múltiples picos y valles. Simulated Annealing (SA), que permite una exploración más amplia del espacio de soluciones al aceptar soluciones subóptimas en las primeras etapas del proceso. Este enfoque de exploración adaptativa evita que el algoritmo se quede atrapado en óptimos locales, permitiendo una búsqueda más robusta de soluciones óptimas globales, especialmente en problemas de optimización no convexos, como aquellos que incluyen costos fijos de transacción. En el estudio de \cite{Rubio-Garcia2022}, se evidencia que SA es particularmente adecuado para la optimización de portafolios en presencia de restricciones complejas. Su estructura estocástica y adaptativa permite reducir el tiempo de búsqueda al explorar eficientemente soluciones subóptimas al inicio, lo que contribuye a la eficacia de este algoritmo en problemas de portafolios discretos. Además, el estudio introduce una métrica de rendimiento denominada "time to target" (tiempo para alcanzar el objetivo), que cuantifica el tiempo requerido para obtener una solución de calidad en términos de una solución que maximiza el Sharpe Ratio, proporcionando una referencia para comparar la eficiencia de SA frente a otros métodos.
+        La optimización de portafolios implica complejidades adicionales cuando se introducen restricciones no lineales, como los costos de transacción fijos o los límites en la inversión en unidades discretas. Estas restricciones convierten el problema en uno no convexo, limitando la efectividad de los métodos clásicos como la programación cuadrática y lineal. En este contexto, los algoritmos heurísticos como Hill Climbing (HC) y Simulated Annealing (SA) han surgido como alternativas viables para enfrentar la naturaleza de estas funciones objetivo. HC es un algoritmo de búsqueda local que optimiza la función objetivo mediante ajustes incrementales a una solución inicial. Aunque es rápido en converger hacia un óptimo local, su enfoque determinista lo hace vulnerable a quedar atrapado en estos óptimos, lo que puede ser un obstáculo significativo en problemas complejos de optimización de portafolios, donde las múltiples restricciones generan una superficie de solución con múltiples picos y valles. Simulated Annealing (SA), que permite una exploración más amplia del espacio de soluciones al aceptar soluciones subóptimas en las primeras etapas del proceso. Este enfoque de exploración adaptativa evita que el algoritmo se quede atrapado en óptimos locales, permitiendo una búsqueda más robusta de soluciones óptimas globales, especialmente en problemas de optimización no convexos, como aquellos que incluyen costos fijos de transacción. En el estudio de Rubio-García, García-Ripoll y Porras (2022)\cite{Rubio-Garcia2022}, se evidencia que SA es particularmente adecuado para la optimización de portafolios en presencia de restricciones complejas. Su estructura estocástica y adaptativa permite reducir el tiempo de búsqueda al explorar eficientemente soluciones subóptimas al inicio, lo que contribuye a la eficacia de este algoritmo en problemas de portafolios discretos. Además, el estudio introduce una métrica de rendimiento denominada "time to target" (tiempo para alcanzar el objetivo), que cuantifica el tiempo requerido para obtener una solución de calidad en términos de una solución que maximiza el Sharpe Ratio, proporcionando una referencia para comparar la eficiencia de SA frente a otros métodos.
         
         En la comparación entre Hill Climbing y Simulated Annealing, este último muestra una capacidad superior para maximizar el Sharpe Ratio al ser más resistente a los óptimos locales. Esto es esencial en escenarios financieros donde la complejidad de las restricciones y los costos fijos de transacción agregan un nivel adicional de dificultad. Hill Climbing, si bien eficiente en tiempo, resulta limitado en su exploración y podría no encontrar la solución óptima global en problemas de portafolios que incluyen estos componentes no convexos. En este sentido, el uso de SA ofrece una exploración del espacio de soluciones más completa, mientras que Hill Climbing es preferible en situaciones donde se prioriza la rapidez de convergencia sobre una búsqueda exhaustiva.
         
@@ -132,20 +135,21 @@
                 language=Python,
                 caption={Generación de retornos y matriz de covarianza},
                 label={lst:returns_cov},
-                numbers=left,
+                numbers=none,
                 numberstyle=\tiny\color{gray},
                 basicstyle=\ttfamily\footnotesize,
                 keywordstyle=\color{blue},
                 commentstyle=\color{green!60!black},
                 breaklines=true,
                 showstringspaces=false,
-                xleftmargin=0.1em,
+                xleftmargin=1em,
                 framexleftmargin=0.2em,
-                frame=single,
-                framesep=0.2em,
-                aboveskip=0.1em,
+                frame=none,
+                framesep=1em,
+                aboveskip=0.3em,
                 belowskip=0.1em,
-               framesep=1em, resetmargins=true
+               framesep=1em, 
+               resetmargins=true
             ]
 # Retornos esperados de cada activo
 returns = np.random.uniform(0.1, 0.2, n)
@@ -161,18 +165,18 @@ cov_matrix = np.random.uniform(0.001, 0.002, (n, n))
                         language=Python,
                         caption={Cálculo del retorno del portafolio},
                         label={lst:portfolio_return},
-                        numbers=left,
+                        numbers=none,
                         numberstyle=\tiny\color{gray},
                         basicstyle=\ttfamily\footnotesize,
                         keywordstyle=\color{blue},
                         commentstyle=\color{green!60!black},
                         breaklines=true,
                         showstringspaces=false,
-                        xleftmargin=0.1em,
+                        xleftmargin=1em,
                         framexleftmargin=0.2em,
-                        frame=single,
+                        frame=none,
                         framesep=0.2em,
-                        aboveskip=0.1em,
+                        aboveskip=0.8em,
                         belowskip=0.1em,
                         resetmargins=true
                     ]
@@ -191,19 +195,19 @@ cov_matrix = np.random.uniform(0.001, 0.002, (n, n))
                         language=Python,
                         caption={Cálculo de la varianza del portafolio},
                         label={lst:portfolio_variance},
-                        numbers=left,
+                        numbers=none,
                         numberstyle=\tiny\color{gray},
                         basicstyle=\ttfamily\footnotesize,
                         keywordstyle=\color{blue},
                         commentstyle=\color{green!60!black},
                         breaklines=true,
                         showstringspaces=false,
-                        xleftmargin=0.1em,
+                        xleftmargin=1em,
                         framexleftmargin=0.2em,
-                        frame=single,
+                        frame=none,
                         framesep=0.2em,
-                        aboveskip=0.1em,
-                        belowskip=0.1em,
+                        aboveskip=0.3em,
+                        belowskip=0.2em,
                         resetmargins=true
                     ]
     portfolio_variance = np.dot(weights, np.dot(cov_matrix, weights))
@@ -215,22 +219,22 @@ cov_matrix = np.random.uniform(0.001, 0.002, (n, n))
                         language=Python,
                         caption={Cálculo de la varianza del portafolio},
                         label={lst:portfolio_variance},
-                        numbers=left,
+                        numbers=none,
                         numberstyle=\tiny\color{gray},
                         basicstyle=\ttfamily\footnotesize,
                         keywordstyle=\color{blue},
                         commentstyle=\color{green!60!black},
                         breaklines=true,
                         showstringspaces=false,
-                        xleftmargin=0.1em,
+                        xleftmargin=1em,
                         framexleftmargin=0.2em,
-                        frame=single,
-                        framesep=0.2em,
-                        aboveskip=0.1em,
+                        frame=none,
+                        framesep=0.1em,
+                        aboveskip=0.5em,
                         belowskip=0.1em,
                         resetmargins=true
                     ]
-    harpe_ratio = portfolio_return / np.sqrt(portfolio_variance)
+    Sharpe_ratio = portfolio_return / np.sqrt(portfolio_variance)
                     \end{lstlisting}
                     Este Sharpe Ratio es el valor de la función de fitness. Maximizar este valor es el objetivo del problema, pues refleja una mejor relación entre el rendimiento obtenido y el riesgo asumido.
             \end{enumerate}
@@ -244,7 +248,7 @@ cov_matrix = np.random.uniform(0.001, 0.002, (n, n))
                 language=Python,
                 caption={vector inicial},
                 label={lst:portfolio_variance},
-                numbers=left,
+                numbers=none,
                 numberstyle=\tiny\color{gray},
                 basicstyle=\ttfamily\footnotesize,
                 keywordstyle=\color{blue},
@@ -253,10 +257,10 @@ cov_matrix = np.random.uniform(0.001, 0.002, (n, n))
                 showstringspaces=false,
                 xleftmargin=0.1em,
                 framexleftmargin=0.2em,
-                frame=single,
+                frame=none,
                 framesep=1em,
                 aboveskip=0.5em,
-                belowskip=0.5em,
+                belowskip=0.1em,
                framesep=1em,
                resetmargins=true
             ]
@@ -293,6 +297,8 @@ La combinación específica de pesos es considerada la solución óptima porque 
                     columns=fullflexible,
                     keepspaces=true,
                     basewidth={0.5em,0.5em},
+                    aboveskip=0.5em,
+                    belowskip=0.1em,
                     framesep=1em
                 ]
     def get_neighbors(weights):
@@ -325,7 +331,9 @@ La combinación específica de pesos es considerada la solución óptima porque 
                     numbers=none,
                     columns=fullflexible,
                     keepspaces=true,
-                    basewidth={0.5em,0.5em}
+                    basewidth={0.5em,0.5em},
+                    aboveskip=0.5em,
+                    belowskip=0.1em
                 ]
     def random_neighbor(weights):
         # Selecciona dos indices aleatorios
@@ -358,7 +366,9 @@ La combinación específica de pesos es considerada la solución óptima porque 
                     numbers=none,
                     columns=fullflexible,
                     keepspaces=true,
-                    basewidth={0.5em,0.5em}
+                    basewidth={0.1em,0.1em},
+                    aboveskip=0.4em,
+                    belowskip=0.2em,
                 ]
     delta = current_fitness - new_fitness
                 \end{lstlisting}
@@ -377,7 +387,7 @@ La combinación específica de pesos es considerada la solución óptima porque 
                     showstringspaces=false,
                     tabsize=4,
                     frame=none,
-                    xleftmargin=-1em,
+                    xleftmargin=1em,
                     numbers=none,
                     columns=fullflexible,
                     keepspaces=true,
@@ -396,29 +406,32 @@ def accept(delta, T):
 %----------------------------------------------------------
     \section{Resultados}
         \begin{table}[h]
-            \centering
-            \begin{tabular}{|c|c|c|}
-            \hline
-            \textbf{Num Assets (n)} & \textbf{Hill Climbing} & \textbf{Simulated Annealing} \\
-            \hline
-            3   & 0.000229 & 6.136169 \\
-            5   & 0.000472 & 5.422510 \\
-            10  & 0.000173 & 5.876650 \\
-            20  & 0.000218 & 6.067454 \\
-            30  & 0.000173 & 6.451426 \\
-            40  & 0.000259 & 6.436156 \\
-            50  & 0.000158 & 7.520601 \\
-            100 & 0.001829 & 12.084614 \\
-            200 & 0.002025 & 16.646352 \\
-            300 & 0.000791 & 20.735656 \\
-            500 & 0.000778 & 39.147365 \\
-            \hline
-            \end{tabular}
-            \caption{Comparación de tiempo de ejecuacion de Hill Climbing y Simulated Annealing}
-            \label{tab:comparison}
+	\centering
+	\begin{tabular}{@{} c S[table-format=1.6] S[table-format=1.6] S[table-format=1.6] S[table-format=1.6] @{}}
+		\toprule
+		\multirow{2}{*}{\textbf{Num Assets (n)}} &                   \multicolumn{2}{c}{\textbf{Hill Climbing}} &                 \multicolumn{2}{c}{\textbf{Simulated Annealing}} \\
+		   & \textbf{Fitness} & \textbf{Time (s)} 
+              & \textbf{Fitness} & \textbf{Time (s)} \\ 
+		\midrule
+		3   & 3.418664 & 0.000229 & 3.322265 & 6.136169 \\
+		5   & 3.626908 & 0.000472 & 3.702583 & 5.422510 \\
+		10  & 3.996618 & 0.000173 & 4.208503 & 5.876650 \\
+		20  & 3.871685 & 0.000218 & 4.500321 & 6.067454 \\
+		30  & 3.972695 & 0.000173 & 4.527472 & 6.451426 \\
+		40  & 3.817355 & 0.000259 & 4.532724 & 6.436156 \\
+		50  & 3.875171 & 0.000158 & 4.507698 & 7.520601 \\
+		100 & 3.826789 & 0.001829 & 4.437611 & 12.084614 \\
+		200 & 3.866259 & 0.002025 & 4.465897 & 16.646352 \\
+		300 & 3.901261 & 0.000791 & 4.539626 & 20.735656 \\
+		500 & 3.883665 & 0.000778 & 4.527112 & 39.147365 \\
+		\bottomrule
+	   \end{tabular}
+	   \caption{Comparación de resultados optimos Hill Climbing y Simulated Annealing para distintos tamaños de portafolio}
+	   \label{tab:comparison}
         \end{table}
+    
 
-        De la tabla 1 es interpreta que los tiempos en segundos de Simulated Annealing es directamente proporcional a la cantidad de portafolios analizados
+        De la tabla 1 se interpreta, que los tiempos en segundos de Simulated Annealing es directamente proporcional a la cantidad de portafolios analizados. Así mismo observamos que los valores fitness para Simulated Annealing se estabilizan en 4.5, esto significa que el proceso de búsqueda de optimo global fue eficiente, pudiendo salir de los optimos locales 
 
 
         \begin{figure}[h]
@@ -431,36 +444,18 @@ def accept(delta, T):
         En la gráfica presentada se muestra la comparación del tiempo de ejecución entre dos algoritmos de optimización, Hill Climbing y Simulated Annealing, aplicados al problema de optimización de portafolios financieros. El eje horizontal representa el número de activos en el portafolio, mientras que el eje vertical indica el tiempo de ejecución en segundos, del resultado obtenido se puede deducir que Hill Climbing es constante y rápido en comparación con Simulated Annealing, porque este algoritmo no evalúa soluciones alternativas, en términos de tiempo de ejecución es más eficiente. Por otro lado, Simulated Annealing tiende a incrementar a medida que tenga más portafolios por analizar y esto se debe a que la naturaleza del algoritmo toma soluciones alternativas permitiendo descubrir el óptimo local y llegar hasta el óptimo global.
 
 
-        \begin{table}[h]
-            \centering
-            \begin{tabular}{|c|c|c|}
-            \hline
-            \textbf{Num Assets (n)} & \textbf{Hill Climbing} & \textbf{Simulated Annealing} \\
-            \hline
-            3   & 3.418664 & 3.322265 \\
-            5   & 3.626908 & 3.702583 \\
-            10  & 3.996618 & 4.208503 \\
-            20  & 3.871685 & 4.500321 \\
-            30  & 3.972695 & 4.527472 \\
-            40  & 3.817355 & 4.532724 \\
-            50  & 3.875171 & 4.507698 \\
-            100 & 3.826789 & 4.437611 \\
-            200 & 3.866259 & 4.465897 \\
-            300 & 3.901261 & 4.539626 \\
-            500 & 3.883665 & 4.527112 \\
-            \hline
-            \end{tabular}
-            \caption{Comparación de resultados optimos Hill Climbing y Simulated Annealing para distintos tamaños de portafolio}
-            \label{tab:comparison}
-        \end{table}
-
-        De la tabla 2 se puede observar que los valores fitness para Simulated Annealing se estabilizan en 4.5, esto significa que el proceso de búsqueda de optimo global fue eficiente, pudiendo salir de los optimos locales 
+        %\begin{figure}[h]
+        %    \centering
+        %    \includegraphics[width=\linewidth]{figures/exe_fitness.pdf}
+        %    \caption{Grafica de comparación de resultados optimos Hill Climbing y Simulated Annealing para distintos tamaños de portafolio}
+        %    \label{fig:sample_figure}
+        %\end{figure}
 
         \begin{figure}[h]
             \centering
-            \includegraphics[width=\linewidth]{figures/exe_fitness.pdf}
+            \includegraphics[width=\linewidth]{figures/Fitness_Comparisson-9x.png}
             \caption{Grafica de comparación de resultados optimos Hill Climbing y Simulated Annealing para distintos tamaños de portafolio}
-            \label{fig:sample_figure}
+            \label{fig:sample_figure2}
         \end{figure}
 
         La gráfica presentada muestra la comparación del fitness obtenido para el problema de optimización de portafolios utilizando dos algoritmos: Hill Climbing y Simulated Annealing. El eje horizontal representa el número de activos en el portafolio, y el eje vertical muestra el valor de fitness, medido como el ratio de Sharpe, que indica la relación entre el retorno esperado y el riesgo del portafolio. Del resultado obtenido se puede deducir que los valores fitness de Hill Climbing comparado con Simulated Annealing son bajos, debido a que es más probable que se quede atrapado en óptimos locales y no pueda explorar soluciones alternativas.
